@@ -1,0 +1,28 @@
+.modal-telm {
+	background-color: #e3ebff;
+	color: #343a40;
+	.modal-header {
+		background-color: #24329d;
+		color: #fff;
+    .close {
+      opacity: 1;
+      color: #ffffff;
+    }
+	}
+	.modal-body {
+		.card {
+			background-color: #d1deff;
+		}
+	}
+
+	form {
+		.form-group {
+			.form-control {
+				color: #343a40;
+			}
+      select {
+        background-color: #d1deff;
+      }
+		}
+	}
+}

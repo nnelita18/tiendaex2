@@ -1,0 +1,21 @@
+$bg-link: #f8c000;
+$doubts: '.doubts';
+
+#{$doubts}{
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.page {
+		background-color: $bg-link;
+		padding: .6rem .8rem;
+    	border-radius: .4rem;
+    	margin-bottom: .45rem;
+    	h1 {
+    		font-size: 1.2rem;
+    		margin: 0;
+    	}
+	}
+}
+

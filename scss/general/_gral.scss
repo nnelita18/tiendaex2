@@ -1,0 +1,42 @@
+$box-cmt:'.box-cmt';
+
+#{$box-cmt}{
+	font-size: .82rem;
+	&__user {
+	    color: #24339d;
+	    font-size: .9rem;
+	    span {
+	    	text-transform: uppercase;
+	    	font-size: .78rem;
+	    }
+	}
+	&__text {
+		background-color: #d3e2f7;
+	    padding: .5rem .8rem;
+	    border-radius: 10px 10px 10px 0;
+	}
+	&__date {
+		text-align: right;
+	    font-size: .7rem;
+	    color: #24339d;
+	}
+}
+
+.modal-comm {
+	.modal-header {
+		background-color: #d3e2f7;
+	}
+	.modal-content {
+		background: #f4f8fb;
+	}
+	.list-cmms {
+		overflow-y: auto;
+	    height: 225px;
+	    background: white;
+	    padding: .3rem .5rem;
+	}
+
+}
+
+
+

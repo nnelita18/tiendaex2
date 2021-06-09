@@ -1,0 +1,30 @@
+$poptour: '.popover';
+
+#{$poptour}{
+	&.tour-tour {
+		background-color: #fdfdfd;
+		border-radius: .8rem;
+		border: 1px solid #dae2f5;
+		.popover-header {
+			border-top-left-radius: .8rem;
+			border-top-right-radius: .8rem;
+			background-color: #e9edfd;
+		}
+		.popover-navigation {
+			.btn-group {
+				margin-right: .5rem;
+				.btn-secondary {
+					background-color: #1f346f;
+				}
+			}
+			.btn-secondary {
+				background-color: #1b9029;
+			}
+			.btn {
+				font-size: .78rem;
+				padding: 0.3rem .4rem;
+			}
+		}
+	}
+}
+

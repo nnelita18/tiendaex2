@@ -1,0 +1,21 @@
+$body-bg: #e9edfd;
+$body-color: #173266;
+
+// Typography
+// $body-color: $gray-600 !default;
+
+$font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$font-weight-light: 300 !default;
+// $font-weight-base: 400;
+$headings-font-weight: 400 !default;
+
+$purplebrand: #e55153;
+$yellowbrand: #ffbb00;
+$white: #ffffff;
+$white: #f1f2f1;
+
+$theme-colors: (
+  "primary": #1f346f,
+  "danger": #ff4136
+);

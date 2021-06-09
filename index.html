@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CRM - Microtec</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/datepicker/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="vendors/sweetalert2/bootstrap-4.min.css">
+  <link href="vendors/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+  <link href="assets/vendors/bootstrap-tour/css/bootstrap-tour.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="vendors/DataTables/datatables.min.css"/>
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body class="bg-home">
+  <div class="container-scroller d-flex bg-home">
+    <!-- partial:./partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <ul id="navmenu" class="nav">
+        <li class="nav-item sidebar-category">
+          <a class="navbar-brand brand-logo m-1" href="#">
+            <img src="assets/images/options/tienda-logo.png" class="img-fluid" alt="TIENDA EXPRESS"/>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a  href="#" class="nav-link py-3 justify-content-center shadow-sm" style="background-color: #e65119;">
+            <!-- <i class="mdi mdi-comment-question-outline"></i> -->
+            <strong>Bienvenido</strong><i class="fas fa-user-check ml-2"></i>
+            <span class="menu-title d-block w-100 ml-0 mt-2 font-weight-bold"><?php echo $_SESSION["tiendaExpress_nombre"]; ?></span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="#" class="nav-link" id="startTourBtn">
+            <!-- <i class="mdi mdi-comment-question-outline"></i> -->
+            <i class="fas fa-comment-alt"></i>
+            <span class="menu-title">¡Conozcamos la plataforma!</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a id="tour-dep" class="nav-link pageto" href="views/fns-admin/deposito-saldo.html">
+            <!-- <i class="mdi mdi-folder-plus"></i> -->
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span class="menu-title">Depósito de saldo</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a id="tour-movsal" class="nav-link pageto" href="views/fns-admin/movimientos-saldo.html" data-toggle="modal" data-target="#saldoModal">
+            <!-- <i class="mdi mdi-account-search"></i> -->
+            <i class="fas fa-search-dollar"></i>
+            <span class="menu-title">Movimientos de saldo</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a id="tour-ganan" class="nav-link pageto" href="views/fns-admin/mis-ganancias.html">
+            <!-- <i class="mdi mdi-account-search"></i> -->
+            <i class="fas fa-search-dollar"></i>
+            <span class="menu-title">Mis ganancias</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a id="tour-duds" class="nav-link pageto" href="views/fns-admin/dudas.html">
+            <!-- <i class="mdi mdi-account-search"></i> -->
+            <i class="fas fa-search-dollar"></i>
+            <span class="menu-title">Dudas o preguntas</span>
+          </a>
+        </li>
+        <hr>
+        <li class="nav-item ">
+          <a id="tour-exit" onclick="cerrar_sesion()"  href="#" class="nav-link">
+            <!-- <i class="mdi mdi-folder-plus"></i> -->
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="menu-title">SALIR</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper position-relative">
+      <nav id="hmb" class="navbar col-lg-12 col-12 px-0 py-0 d-flex flex-row shadow-sm">
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-start">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-arrow-collapse-horizontal"></span>
+          </button>
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+
+      </nav>
+      <!-- partial -->
+      <div class="main-panel" id="change-content">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sites--navcol">
+          <a class="navbar-brand close-cbox btn-dfl--close" id="cboxClose" title="Regresar">
+            <i class="fas fa-arrow-left mr-2"></i>Regresar al menú</a>
+          </a>
+          <div class="alert alert-pink mx-3 my-1 col-sm-10 col-md-10">
+              <p>Venta de Planes Tarifarios</p>
+              <div class="action-btn">
+                <a href="" class="btn btn-info action-btn--tut">Ver Tutorial</a>
+                <a href="" class="btn btn-success action-btn--faq">Preguntas Frecuentes</a>
+              </div>
+          </div>
+          <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbaTiendaExpress" aria-controls="navbaTiendaExpress" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbaTiendaExpress">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active d-none">
+                      <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+
+                  </li>
+              </ul>
+          </div>
+        </nav>
+
+        <section class="container-fluid sites">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 banner-info">
+                    <div id="banner-title" class="sites__cardtitle shadow-lg">
+                      <div class="info">
+                        <h1 class="title">Bienvenido a</h1>
+                        <img src="assets/images/options/tienda-logo-horz.png" alt="TIENDA EXPRESS" class="img-fluid logo-icon">
+                      </div>
+                      <div class="sites__price hidden-md-up">
+                        <i class="mdi mdi-currency-usd"></i>
+                        <div class="currency text-left">
+                          <span>aldo actual</span>
+                          <br>
+                          <strong>635,400.00</strong>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 hidden-md-down">
+                  <div id="sec-saldo" class="sites__price">
+                    <i class="mdi mdi-currency-usd"></i>
+                    <div class="currency">
+                      <span>aldo actual</span>
+                      <br>
+                      <strong>635,400.00</strong>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="services" class="row">
+                  <!-- tar -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/tar/" class="sites--option option--blue colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Vende el plan “Internet en tu casa”, realiza solicitudes de otros planes y obtén ganancias por esto.">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico1.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title">Venta de planes Telcel</div>
+
+                            <div class="description">
+                                Venta de Planes Tarifarios
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!-- /tar -->
+
+                  <!-- Recargas -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id = "venta_tae" class="sites--option option--pink300 colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Ofrece recargas de tiempo aire de cualquier compañía">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico2.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title">Recargas</div>
+
+                            <div class="description">
+                                Recarga tiempo aire electrónico
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!--/ Recargas -->
+
+                  <!-- Pago de Servicios -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id="pago_servicios" class="sites--option option--oran colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Cobra los servicios más solicitados por tus clientes y genera ganancias (Telmex, Totalplay, CFE, etc.)">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico3.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title">Pago de Servicios</div>
+
+                            <div class="description">
+                              Paga tu recibo de CFE, Telmex, Dish y mas...
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!--/ Pago de Servicios -->
+
+                  <!-- PayJoy -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="" class="sites--option option--green colorbox shadow-lg"
+                        data-toggle="tooltip" data-placement="top" title="Vende equipos con el sistema de crédito de Payjoy y recupera tu ganancia de forma inmediata.">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico4.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title">Crédito PayJoy</div>
+
+                            <div class="description">
+                                Venta/Recepción de Pagos PayJoy
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!--/ PayJoy -->
+
+                  <!-- TAF -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/taf/" class="sites--option option--oran200 colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Promueve la compra de equipos a través del crédito de Telcel y obtén ganancia por ello.">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico5.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title small">
+                              Celular a crédito con Telcel
+                              <small class="font-weight-bold">(Tarjeta Amigo Fácil)</small>
+                            </div>
+
+                            <div class="description">
+                                Venta en TAF
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!--/ TAF -->
+
+                  <!-- Trámites -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" id="tramites" class="sites--option option--salm colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Realiza cambios de compañía, recupera números Telcel y obtén ganancias por ello.">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico6.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title small">Cambio de compañía y recuperación de número</div>
+
+                            <div class="description">
+                                Trámites básicos, Cambio/Activacion de Chips con saldo
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!-- Trámites -->
+
+                  <!-- Chips Express -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" id="chips" class="sites--option option--purp colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Vende chips Telcel listos para utilizarse en cualquier celular">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico7.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title">Venta de chip</div>
+
+                            <div class="description">
+                                Activación y venta de chips express
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!--/ Chips Express -->
+
+                  <!-- Pedidos -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                      <a href="https://www.micro-tec.com.mx/pagina/Control_Pedidos" class="sites--option option--blueligth colorbox shadow-lg"
+                       data-toggle="tooltip" data-placement="top" title="Compra los equipos y chips que requieres a través de nuestra tienda virtual y recíbelos en físico en tu tienda.">
+                          <div class="icon">
+                              <img src="assets/images/iconopt/ico8.png" class="img-icon">
+                          </div>
+                          <div class="content">
+                            <div class="title">Comprar nuevos equipos</div>
+
+                            <div class="description">
+                                Pedidos en linea
+                            </div>
+                          </div>
+                      </a>
+                  </div>
+                  <!--/ Pedidos -->
+              </div>
+        </section>
+        <!-- content-wrapper ends -->
+        <!-- partial:./partials/_footer.html -->
+        <footer class="footer d-none">
+          <div class="card rounded">
+            <div class="card-body">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
+                <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">Copyright © <span id="year-site">2020</span>.</p>
+                <p class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center mb-0">Microtecnologías Móviles S.A. de C.V.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <div class="float-icons">
+    <a href="" class="chat-whats ico-float"></a>
+  </div>
+
+  <!-- base:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- Resources -->
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <script src="vendors/datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="vendors/sweetalert2/sweetalert2.min.js"></script>
+  <script src="vendors/moment/moment.min.js"></script>
+  <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+  <script src="vendors/fullcalendar/es.js"></script>
+  <script src="assets/vendors/bootstrap-tour/js/bootstrap-tour-standalone.min.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/statistics.js"></script>
+  <script src="assets/js/init.js"></script>
+  <script src="controllers/tourStoreBoots.js"></script>
+  <script type="text/javascript" src="vendors/DataTables/datatables.min.js"></script>
+  <!-- End custom js for this page-->
+
+  <script>
+    var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+    var f=new Date();
+    var datetoday = meses[f.getMonth()] + ' ' + f.getDate() + ", " + f.getFullYear();
+    var yearSite = f.getFullYear();
+    // document.write( meses[f.getMonth()] + ' ' + f.getDate() + ", " + f.getFullYear());
+
+    document.getElementById("date-today").innerHTML = datetoday;
+    document.getElementById("year-site").innerHTML = yearSite;
+  </script>
+</body>
+
+</html>

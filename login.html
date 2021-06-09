@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="hbody-100">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CRM - Microtec</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/datepicker/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="vendors/sweetalert2/bootstrap-4.min.css">
+  <link href="vendors/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body class="h-100 login--bg">
+  <main class="main h-100 w-100 login">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-sm-10 col-md-5 mx-auto d-table h-100 py-4">
+          <div class="d-table-cell align-middle">
+            <div class="title-login">
+                <h1>¡Bienvenido!</h1>
+                <h4>Ingresa tus datos para continuar…</h4>
+            </div>
+            <div class="card login__card">
+              <div class="card-body">
+                <div class="">
+                  <div class="text-center">
+
+                    <div class="text-center mt-4">
+                      <!-- <h1 class="h2 text-uppercase mb-0">Bienvenido a</h1> -->
+                      <img src="assets/images/logos/logo.png" alt="" class="img-fluid" width="300">
+                      <!-- <p class="lead">Ingresa tu información para continuar</p> -->
+                    </div>
+
+                  </div>
+                  <form class="form-login">
+                    <div class="form-group">
+                      <label>Usuario</label>
+                      <input class="form-control form-control-lg" type="text" name="user" placeholder="Ingrese su Usuario" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Contraseña</label>
+                      <input class="form-control form-control-lg" type="password" name="password" placeholder="Ingrese sus contraseña" required>
+                    </div>
+                    <div class="text-center mtbtn">
+                      <a href="index.html" class="btn btn-theme btn-theme--orange">Entrar</a>
+                      <!-- <button type="submit" class="btn btn-lg btn-primary">Entrar</button> -->
+                    </div>
+                  </form>
+                  <div class="text-center">
+                      <img src="assets/images/logos/microtec-logo.png" alt="" class="img-fluid foot-logo" width="300">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+<!-- Recuperar COntraseña Modal -->
+<div class="modal fade" id="recov-psw" tabindex="-1" role="dialog" aria-labelledby="recov-pswLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recov-pswLabel">Recuperación de Contraseña</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-form-transparent text-left p-3">
+            <form class="pt-3">
+                <div class="form-group">
+                    <label for="exampleInputEmail">Ingresa el correo que usaste para crear tu cuenta, te enviaremos un enlace para que configures tu nueva contraseña.</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputEmail" placeholder="Correo Electronico">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-dfl mx-auto">Enviar</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- base:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- Resources -->
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <script src="vendors/datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="vendors/sweetalert2/sweetalert2.min.js"></script>
+  <script src="vendors/moment/moment.min.js"></script>
+  <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+  <script src="vendors/fullcalendar/es.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/statistics.js"></script>
+  <script src="assets/js/init.js"></script>
+  <!-- End custom js for this page-->
+
+  <script>
+    var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+    var f=new Date();
+    var datetoday = meses[f.getMonth()] + ' ' + f.getDate() + ", " + f.getFullYear();
+    var yearSite = f.getFullYear();
+    // document.write( meses[f.getMonth()] + ' ' + f.getDate() + ", " + f.getFullYear());
+
+    document.getElementById("date-today").innerHTML = datetoday;
+    document.getElementById("year-site").innerHTML = yearSite;
+</script>
+</body>
+
+</html>

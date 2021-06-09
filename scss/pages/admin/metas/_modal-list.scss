@@ -1,0 +1,120 @@
+$crm_modal: '.crm_modal';
+$bgblue-modal: #24329d;
+$bglightblue-modal:#2caae1;
+
+
+#{$crm_modal}{
+
+  &__content {
+    .forms-sample {
+      label {
+        font-size: 0.75rem;
+        margin: 0;
+        &.col-form-label {
+          color: #ffffff;
+        }
+      }
+      .form-group {
+        margin-bottom: .3rem;
+      }
+    }
+    .form-control,
+     select {
+      background-color: transparent;
+      color: #ffffff;
+    }
+    .form-control {
+      padding: 0.4rem .9rem;
+      height: 2rem;
+
+    }
+    textarea {
+      height: auto !important;
+    }
+  }
+  &--ver {
+    .close {
+      opacity: 1;
+      color: #ffffff;
+    }
+    background-color: $bgblue-modal;
+    .modal-header {
+      padding: .5rem 1rem;
+      .modal-title {
+        color: #ffffff !important;
+      }
+    }
+    &.modalbg--warning {
+      background-color: #fec650;
+      .card-title {
+        color: #fec650 !important;
+      }
+    }
+    .card {
+      background-color: $bgblue-modal;
+      .card-title {
+        background-color: #ffffff;
+        color: $bgblue-modal;
+        padding: .5rem;
+      }
+      .card-body {
+        padding: 0;
+      }
+      &--bgwarning {
+        background-color: #fec650;
+      }
+    }
+    table {
+      color: #ffffff;
+      th,
+      td {
+        padding: .5rem 0.8rem;
+      }
+    }
+  }
+  &--editar {
+    .close {
+      opacity: 1;
+      color: #ffffff;
+    }
+    background-color: $bglightblue-modal;
+    .modal-header {
+      padding: .5rem 1rem;
+      .modal-title {
+        color: #ffffff;
+      }
+    }
+    .card {
+      background-color: $bglightblue-modal;
+      .card-body {
+        padding: 0;
+      }
+      .card-title {
+        background-color: #ffffff;
+        color: $bglightblue-modal;
+        padding: .5rem;
+      }
+      .form-group {
+        label {
+          color: #ffffff;
+        }
+      }
+    }
+    table {
+      color: #ffffff;
+      border: none;
+      th,
+      td {
+        padding: .2rem 0.8rem;
+        border: none;
+        font-size: .86rem;
+      }
+    }
+  }
+  .modal-dialog {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      max-width: 80%;
+    }
+  }
+
+}

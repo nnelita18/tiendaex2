@@ -1,0 +1,72 @@
+$crm-metas: '.crm-metas';
+$bg-tabs-nav: #c6d6fd;
+$bg-tabactive: #326bf5;
+$bg-tabcontent: #e3ebff;
+
+#{$crm-metas}{
+	// background-color: #2334a0;
+  padding: 0 .5rem;
+	&__items {
+    height: 72px;
+    overflow-y: scroll;
+		.item {
+			background-color: #24329d;
+			color: #ffffff;
+			border-color: #366cfc;
+      margin-bottom: .3rem;
+			&.selected {
+				background-color: #326bf5;
+			}
+		}
+	}
+  &__navtabs {
+    .nav-tabs {
+      background-color: $bg-tabs-nav;
+      .nav-link {
+        border-color: #e9ecef #e9ecef #dee2e6;
+        color: $bg-tabactive;
+        border-radius: .5rem;
+        margin: .2rem;
+        &.active {
+          background-color: $bg-tabactive;
+          color: #e9ecef;
+          border-radius: .5rem;
+
+        }
+        @media (max-width: 767.98px) {
+          width: calc(96% / 2);
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        justify-content: center;
+      }
+    }
+  }
+  &__tabcontent {
+    background-color: $bg-tabcontent;
+    padding: 1rem;
+  }
+}
+
+
+.scrollbarcs::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.scrollbarcs::-webkit-scrollbar
+{
+  width: 7px;
+  background-color: #F5F5F5;
+}
+
+.scrollbarcs::-webkit-scrollbar-thumb
+{
+  background-color: #24329d;
+}
+
+.datepicker {
+  padding: .5rem;
+}

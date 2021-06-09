@@ -1,0 +1,90 @@
+$depositoss: '.depositos-sald';
+$bg-headdep: #f8c000;
+$bg-btngroup: #9e9e9e;
+#{$depositoss}{
+	padding: 5rem 2rem;
+	.accordion {
+		background-color: #ffffff;
+		padding: 1rem;
+		padding: 2rem;
+		border-radius: 1rem;
+		.card {
+			border: 0;
+		}
+		.required {
+			color: #ff5722;
+			font-size: 1rem;
+			font-weight: 700;
+		}
+	}
+	&__head {
+		border: 0;
+		padding: 0;
+		margin-bottom: 0.5rem !important;
+		.btn-link {
+			display: block;
+			width: 100%;
+			text-align: left;
+			border-radius: 0.5rem;
+			background-color: $bg-headdep;
+			font-weight: 700;
+			font-size: 1.2rem;
+			color: #ffffff;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+	.action-btn {
+		padding-top: 5rem;
+		padding-right: 2.8rem;
+		.btn {
+			padding-left: 50px;
+			color: #090f1f;
+			border: none;
+			box-shadow: none;
+			background: {
+				color: transparent;
+				size: 30px 30px;
+				repeat: no-repeat;
+				position: left 10px center;
+			}
+			font-size: 1rem;
+			font-weight: 600;
+			&:hover {
+				color: #f1f1f1;
+			}
+		}
+		&--tut {
+			// background-color: #3f8ac6 !important;
+			background-image: url('../images/icons/camera.png');
+			&:hover {
+				background-color: #3f8ac6 !important;
+			}
+		}
+		&--faq {
+			// background-color: #81b843 !important;
+			background-image: url('../images/icons/faq.png');
+			&:hover {
+				background-color: #f1a434 !important;
+			}
+		}
+	}
+
+	.btn-group {
+		.btn {
+			background-color: $bg-btngroup;
+			border-color: $bg-btngroup;
+			font-weight: 600;
+			padding: .5rem .8rem;
+		}
+	}
+	.page-item.active {
+		.page-link {
+			background-color: $sidebar-dark-bg;
+			border-color: $sidebar-dark-bg;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		padding: 1rem 2rem;
+	}
+}

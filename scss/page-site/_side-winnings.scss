@@ -1,0 +1,40 @@
+$winnings: '.winnings';
+
+#{$winnings}{
+	&__tabs {
+		nav {
+			justify-content: center;
+			.nav-item {
+				background-color: #cdcdcd;
+				text-align: center;
+				margin: .4rem;
+				border-radius: .3rem;
+				width: 190px;
+				max-width: 100%;
+				.title {
+					display: block;
+					color: #ffffff;
+					font-weight: 600;
+				}
+				.active {
+					box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.15) !important;
+				}
+			}
+		}
+	}
+}
+
+.navitem {
+	&--blue {
+		background-color: #41b0f0 !important;
+	}
+	&--green {
+		background-color: #92d050 !important;
+	}
+	&--yell {
+		background-color: #fad967 !important;
+	}
+	&--navyb {
+		background-color: #4472c4 !important;
+	}
+}

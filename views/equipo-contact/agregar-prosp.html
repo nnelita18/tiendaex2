@@ -1,0 +1,337 @@
+<div class="content-wrapper pt-3">
+  <div class="row">
+    <div class="crm-prospects crm-metas col-12 crm-prospects-add">
+      <nav class="crm-prospects__nav crm-metas__navtabs">
+        <div class="nav nav-tabs rounded" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">INFORMACIÓN <i class="mdi mdi-chevron-right"></i></a>
+          <a class="nav-item nav-link" id="nav-personales-tab" data-toggle="tab" href="#nav-personales" role="tab" aria-controls="nav-personales" aria-selected="false">PERSONALES <i class="mdi mdi-chevron-right"></i></a>
+          <a class="nav-item nav-link" id="nav-business-tab" data-toggle="tab" href="#nav-business" role="tab" aria-controls="nav-business" aria-selected="false">EMPRESA <i class="mdi mdi-chevron-right"></i></a>
+          <a class="nav-item nav-link" id="nav-leads-tab" data-toggle="tab" href="#nav-leads" role="tab" aria-controls="nav-leads" aria-selected="false">FUENTE LEADS <i class="mdi mdi-chevron-right"></i></a>
+        </div>
+      </nav>
+      <form class="form-sample">
+        <div class="tab-content crm-prospects__tabscontent crm-metas__tabcontent rounded" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Capturar nuevo prospecto</h4>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="nombre" class="col-sm-3 col-form-label">Nombre(s):</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Sexo</label>
+                        <div class="col-sm-4">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
+                              Masculino
+                              <i class="input-helper"></i>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
+                              Femenino
+                              <i class="input-helper"></i>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div for="paterno" class="form-group row">
+                        <label class="col-sm-3 col-form-label">Apellido Paterno:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="paterno" name="paterno" placeholder="A. Paterno" required>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="materno" class="col-sm-3 col-form-label">Apellido Materno:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="materno" name="materno" placeholder="A. Materno" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="telefono" class="col-sm-3 col-form-label">Teléfono:</label>
+                        <div class="col-sm-9">
+                         <input type="text" class="form-control input-sm" id="telefono" name="telefono" maxlength="10" minlength="10" placeholder="Número a 10 dígitos"required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label">E-mail:</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="email@mail.com" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="medio" class="col-sm-3 col-form-label">Medio de contacto:</label>
+                        <div class="col-sm-9">
+                          <select class="form-control" name="medio" id="medio" required>
+                            <option value="" selected>Seleccione...</option>
+                            <option value="Agente de ventas">Agente de ventas</option>
+                            <option value="Feria/Expo">Feria/Expo</option>
+                            <option value="Medio impreso">Medio impreso</option>
+                            <option value="Radio">Radio</option>
+                            <option value="Recomendacion">Recomendación</option>
+                            <option value="Pagina web">Pagina web</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="coment" class="col-sm-3 col-form-label">Comentarios:</label>
+                        <div class="col-sm-9">
+                          <textarea class="form-control" id="coment" name="coment" rows="3" placeholder="Agregar comentarios..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-personales" role="tabpanel" aria-labelledby="nav-personales-tab">
+            <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="estado" class="col-sm-3 col-form-label">Estado:</label>
+                        <div class="col-sm-9">
+                          <select class="form-control input-sm" name="estado" id="estado">
+                            <option value="" selected="">Estado...</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="muni" class="col-sm-3 col-form-label">Municipio:</label>
+                        <div class="col-sm-9" id="municipio">
+                          <select class="form-control" name="muni" id="muni" disabled>
+                            <option value="" selected>Municipio...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6" id="ciudad">
+                      <div class="form-group row">
+                        <label  for="ciud" class="col-sm-3 col-form-label">Ciudad:</label>
+                        <div class="col-sm-9">
+                          <select class="form-control" name="ciud" id="ciud" disabled>
+                            <option value="" selected>Ciudad...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6" id="colonia">
+                      <div class="form-group row">
+                        <label for="colo" class="col-sm-3 col-form-label">Colonia:</label>
+                        <div class="col-sm-9">
+                          <select class="form-control" name="colo" id="colo" disabled>
+                            <option value="" selected>Colonia...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="cpostal" class="col-sm-3 col-form-label">CP:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="cpostal" id="cpostal" value="" disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="calle"  class="col-sm-3 col-form-label">Calle:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" name="calle" id="calle" placeholder="Calle">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="num" class="col-sm-3 col-form-label">Número:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" name="num" id="num" placeholder="Número">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="int" class="col-sm-3 col-form-label">Interior:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" name="int" id="int" placeholder="Interior">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="cel" class="col-sm-3 col-form-label">Celular:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control input-sm" id="cel" name="cel" maxlength="10" minlength="10" placeholder="Número a 10 dígitos">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="nav-business-tab">
+            <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="empresa" class="col-sm-3 col-form-label">Nombre:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="empresa" id="empresa" placeholder="Nombre de la empresa">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="giro" class="col-sm-3 col-form-label">Giro:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="giro" id="giro" placeholder="Giro de la empresa">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="cargo" class="col-sm-3 col-form-label">Cargo:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="cargo" id="cargo" placeholder="Cargo en la empresa">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="teltrab" class="col-sm-3 col-form-label">Teléfono:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="teltrab" name="teltrab" maxlength="10" minlength="10" placeholder="Número a 10 dígitos">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-leads" role="tabpanel" aria-labelledby="nav-leads-tab">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="fuentelead" class="col-sm-3 col-form-label">FUENTE DEL LEAD:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="fuentelead" id="fuentelead" placeholder="Facebook">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="fecha-creacion" class="col-sm-3 col-form-label">FECHA DE CREACIÓN DEL LEAD EN FB2:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="fecha-creacion" id="fecha-creacion" placeholder="03/07/2020">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="publicacion" class="col-sm-3 col-form-label">Producto o servicio:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="publicacion" id="publicacion" placeholder="GalaxyJ4-PTMSL-3000">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="agente-asign" class="col-sm-3 col-form-label">Agente asignado:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="agente-asign" id="agente-asign" placeholder="Erik">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="fecha-apertura" class="col-sm-3 col-form-label">Fecha de apertura:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="fecha-apertura" id="fecha-apertura" placeholder="03/07/2020">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="estatus-contacto" class="col-sm-3 col-form-label">Estatus del contacto con el prospecto:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="estatus-contacto" id="estatus-contacto" placeholder="03/07/2020">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="obsers1" class="col-sm-3 col-form-label">OBSERVACIONES (escribe el proceso: quedó de avisarme, no contesta, etc)</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="obsers1" id="obsers1" placeholder="03/07/2020">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label for="obsers2" class="col-sm-3 col-form-label">MAS OBSERVACIONES (acuerdos que tienes con el cliente)</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="obsers2" id="obsers2" placeholder="03/07/2020">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-right pt-3">
+            <button class="btn btn-light mr-3">Limpiar</button>
+            <button type="submit" class="btn btn-primary mr-2">Registrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- row end -->
+</div>

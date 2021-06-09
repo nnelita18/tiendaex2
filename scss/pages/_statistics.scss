@@ -1,0 +1,22 @@
+.graph-areas {
+	width: 100%;
+ 	height: 500px;
+  @media (max-width: 992px) {
+    height: auto;
+  }
+}
+.font-charts {
+  &--14 {
+    font-size: 0.75rem;
+  }
+}
+
+.chart-h {
+  height: 200px;
+}
+.bg {
+  &--lightblue{
+    background-color: #e3ebff;
+    border-radius: 0.3rem;
+  }
+}

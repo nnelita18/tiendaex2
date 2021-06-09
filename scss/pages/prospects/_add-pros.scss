@@ -1,0 +1,12 @@
+$crm-prospects-addfil: '.crm-prospects-addfil';
+
+#{$crm-prospects-addfil}{
+  .upload-form {
+    .form-control {
+      border-color: #24329d;
+    }
+  }
+}
+.no-border {
+  border: none;
+}

@@ -1,0 +1,71 @@
+.login {
+    font-family: 'Montserrat', sans-serif;
+    .title-login {
+        color: #ffffff;
+        text-align: center;
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.2rem;
+            font-weight: 900;
+            @include media-breakpoint-down(sm) {
+                font-size: 2.5rem;
+            }
+        }
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.4rem;
+            @include media-breakpoint-down(sm) {
+                font-size: 1rem;
+            }
+        }
+        .container {
+            @include media-breakpoint-down(sm) {
+                height: auto !important;
+            }
+        }
+    }
+    &__card {
+        font-family: 'Montserrat', sans-serif;
+        background: rgba(255, 255, 229, .87);
+        .form-login {
+            margin-top: 3.2rem;
+            // margin-bottom: 3.2rem;
+            .form-group {
+                text-align: center;
+                font-weight: 500;
+                label {
+                    font-size: 1.4rem;
+                    color: #0a4581;
+                    font-weight: 500;
+                }
+                .form-control {
+                    font-size: 1.24rem;
+                    font-weight: 500;
+                }
+            }
+            .mtbtn {
+                margin-top: 3.2rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .foot-logo {
+            width: 210px;
+            height: auto;
+        }
+    }
+
+    &--bg {
+        background: rgb(209,222,240);
+        background: linear-gradient(34deg, rgba(209,222,240,1) 0%, rgba(209,222,240,1) 27%, rgba(239,245,254,1) 74%, rgba(239,245,254,1) 100%);
+        background: {
+            image: url('../images/login/bg-login.jpg');
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        }
+    }
+}
+.hbody-100 {
+    height: 100%;
+}

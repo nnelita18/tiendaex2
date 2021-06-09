@@ -1,0 +1,32 @@
+$float-icons: '.float-icons';
+
+#{$float-icons}{
+	position: fixed;
+    bottom: 1rem;
+    right: -1rem;
+    z-index: 996;
+    .ico-float {
+		display: inline-block;
+		width: 72px;
+		height: 72px;
+		border-radius: 50%;
+		border-style: none;
+		padding: 10px;
+		text-align: center;
+		&.chat-whats {
+			// background-color: #00aeef;
+			background: {
+				image: url('../images/icons/chat.png');
+				position: center;
+				size: 62px;
+				repeat: no-repeat;
+			}
+			margin-right: 2.5rem;
+			color: #1f346f;
+			position: relative;
+			// -webkit-transform: translateZ(700px) translateX(400px);
+			// transform: translateZ(700px) translateX(400px);
+			// opacity: 0;
+		}
+    }
+}

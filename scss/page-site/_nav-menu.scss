@@ -1,0 +1,72 @@
+$navmenu: '.navmenu';
+
+#{$navmenu}{
+	// background: rgb(247,157,19);
+	// background: linear-gradient(60deg, rgba(247,157,19,1) 0%, rgba(255,187,0,1) 100%);
+	background: rgb(31,52,111);
+// background: linear-gradient(60deg, rgba(31,52,111,1) 0%, rgba(31,56,108,1) 56%, rgba(27,144,41,1) 100%);
+	.nav-item {
+		.nav-link{
+			color: $body-color;
+			cursor: pointer;
+			&.profile {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				// background-color: $body-bg;
+				background-color: #1b9029;
+				color: #fff;
+			    border-radius: .3rem;
+			    padding: 0.5rem 1rem;
+
+			    .icon {
+					// background-color: #f79e13;
+					// background-color: theme-colors("primary");
+					padding: .2rem;
+			    }
+			}
+		}
+		.ddprofile {
+			width: 100%;
+    		background-color: rgba(72, 60, 201, 0.75);
+    		.dropdown-item {
+    			color: #ffffff;
+    			&:hover {
+    				background-color: $body-bg;
+    			}
+    		}
+		}
+	}
+}
+
+.alert-pink {
+	background-color: #fbb7b6;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	p {
+		color: #33527d;
+		font-size: 1.18rem !important;
+		font-weight: 600;
+	}
+	.action-btn {
+		.btn {
+			padding-left: 50px;
+			background: {
+				size: 30px 30px;
+				repeat: no-repeat;
+				position: left 10px center;
+			}
+			font-size: 1rem;
+			font-weight: 600;
+		}
+		&--tut {
+			background-color: #3f8ac6 !important;
+			background-image: url('../images/icons/camera.png');
+		}
+		&--faq {
+			background-color: #81b843 !important;
+			background-image: url('../images/icons/faq.png');
+		}
+	}
+}

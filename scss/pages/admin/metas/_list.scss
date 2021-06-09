@@ -1,0 +1,22 @@
+$metas_list: '.metas_list';
+
+#{$metas_list}{
+	.btn-social-icon {
+		width: 25px;
+		height: 25px;
+		padding: 0;
+    	border-radius: .5rem;
+	}
+}
+
+.pagination {
+  margin-top: 1rem;
+	.page-item {
+		&.active {
+			.page-link {
+				background-color: #24329d;
+    			border-color: #24329d;
+			}
+		}
+	}
+}
