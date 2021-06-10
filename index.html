@@ -20,7 +20,7 @@
   <!-- End plugin css for this page -->
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
   <!-- inject:css -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- endinject -->
@@ -33,17 +33,24 @@
       <ul id="navmenu" class="nav">
         <li class="nav-item sidebar-category">
           <a class="navbar-brand brand-logo m-1" href="#">
-            <img src="assets/images/options/tienda-logo.png" class="img-fluid" alt="TIENDA EXPRESS"/>
+            <img src="assets/images/home/logo-tienda.png" class="img-fluid" alt="TIENDA EXPRESS"/>
           </a>
         </li>
         <li class="nav-item">
-          <a  href="#" class="nav-link py-3 justify-content-center shadow-sm" style="background-color: #e65119;">
-            <!-- <i class="mdi mdi-comment-question-outline"></i> -->
-            <strong>Bienvenido</strong><i class="fas fa-user-check ml-2"></i>
-            <span class="menu-title d-block w-100 ml-0 mt-2 font-weight-bold"><?php echo $_SESSION["tiendaExpress_nombre"]; ?></span>
+          <a  href="#" class="nav-link py-2 justify-content-center shadow-sm bg-button">
+            <i class="mdi mdi-account-circle"></i>
+            <strong>¡BIENVENIDO!</strong><i class="fas fa-user-check ml-2"></i>
+            <span class="menu-title d-block w-100 ml-0 mt-2 font-weight-bold"><?php echo $_SESSION["tiendaExpress_nombre"]; ?>Luis Juárez Cianca</span>
           </a>
         </li>
         <li class="nav-item active">
+          <a id="tour-movsal" class="nav-link pageto" href="views/fns-admin/movimientos-saldo.html" data-toggle="modal" data-target="#saldoModal">
+            <!-- <i class="mdi mdi-account-search"></i> -->
+            <i class="fas fa-search-dollar"></i>
+            <span class="menu-title">Inicio</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="#" class="nav-link" id="startTourBtn">
             <!-- <i class="mdi mdi-comment-question-outline"></i> -->
             <i class="fas fa-comment-alt"></i>
@@ -78,20 +85,27 @@
             <span class="menu-title">Dudas o preguntas</span>
           </a>
         </li>
-        <hr>
         <li class="nav-item ">
           <a id="tour-exit" onclick="cerrar_sesion()"  href="#" class="nav-link">
             <!-- <i class="mdi mdi-folder-plus"></i> -->
             <i class="fas fa-sign-out-alt"></i>
-            <span class="menu-title">SALIR</span>
+            <span class="menu-title">Salir</span>
           </a>
+        </li>
+        <hr>
+        <li class="nav-item justify-content-center">
+          <div class="bg-button wfix text-center p-1 mx-auto">
+            <span>Saldo actual</span>
+            <br>
+            <span class="fisixe">$635,400</span>
+          </div>
         </li>
 
       </ul>
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper position-relative">
-      <nav id="hmb" class="navbar col-lg-12 col-12 px-0 py-0 d-flex flex-row shadow-sm">
+      <nav id="hmb" class="navbar col-lg-12 col-12 px-0 py-0 d-flex flex-row shadow-sm d-no">
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-start">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-arrow-collapse-horizontal"></span>
@@ -105,7 +119,7 @@
       </nav>
       <!-- partial -->
       <div class="main-panel" id="change-content">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sites--navcol">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sites--navcol d-none">
           <a class="navbar-brand close-cbox btn-dfl--close" id="cboxClose" title="Regresar">
             <i class="fas fa-arrow-left mr-2"></i>Regresar al menú</a>
           </a>
@@ -135,180 +149,163 @@
         <section class="container-fluid sites">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6 banner-info">
-                    <div id="banner-title" class="sites__cardtitle shadow-lg">
-                      <div class="info">
-                        <h1 class="title">Bienvenido a</h1>
-                        <img src="assets/images/options/tienda-logo-horz.png" alt="TIENDA EXPRESS" class="img-fluid logo-icon">
-                      </div>
-                      <div class="sites__price hidden-md-up">
-                        <i class="mdi mdi-currency-usd"></i>
-                        <div class="currency text-left">
-                          <span>aldo actual</span>
-                          <br>
-                          <strong>635,400.00</strong>
-                        </div>
-                      </div>
+                    <div id="banner-title" class="sites__cardtitle ">
+                      <span class="title">¡Bienvenido!</span>
+                      <span class="f-white">Selecciona el trámite deseado…</span>
                     </div>
-
-                </div>
-                <div class="col-lg-4 col-md-4 hidden-md-down">
-                  <div id="sec-saldo" class="sites__price">
-                    <i class="mdi mdi-currency-usd"></i>
-                    <div class="currency">
-                      <span>aldo actual</span>
-                      <br>
-                      <strong>635,400.00</strong>
-                    </div>
-                  </div>
                 </div>
             </div>
             <div id="services" class="row">
-                  <!-- tar -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/tar/" class="sites--option option--blue colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Vende el plan “Internet en tu casa”, realiza solicitudes de otros planes y obtén ganancias por esto.">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico1.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Venta de planes Telcel</div>
+              <!-- tar -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/tar/" class="sites--option option--blue colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Vende el plan “Internet en tu casa”, realiza solicitudes de otros planes y obtén ganancias por esto.">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico1.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title">Venta de planes Telcel</div>
 
-                            <div class="description">
-                                Venta de Planes Tarifarios
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!-- /tar -->
+                      <div class="description">
+                          Venta de Planes Tarifarios
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!-- /tar -->
 
-                  <!-- Recargas -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id = "venta_tae" class="sites--option option--pink300 colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Ofrece recargas de tiempo aire de cualquier compañía">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico2.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Recargas</div>
+              <!-- Recargas -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id = "venta_tae" class="sites--option option--pink300 colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Ofrece recargas de tiempo aire de cualquier compañía">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico2.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title">Recargas</div>
 
-                            <div class="description">
-                                Recarga tiempo aire electrónico
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!--/ Recargas -->
+                      <div class="description">
+                          Recarga tiempo aire electrónico
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ Recargas -->
 
-                  <!-- Pago de Servicios -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id="pago_servicios" class="sites--option option--oran colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Cobra los servicios más solicitados por tus clientes y genera ganancias (Telmex, Totalplay, CFE, etc.)">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico3.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Pago de Servicios</div>
+              <!-- Pago de Servicios -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id="pago_servicios" class="sites--option option--oran colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Cobra los servicios más solicitados por tus clientes y genera ganancias (Telmex, Totalplay, CFE, etc.)">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico3.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title">Pago de Servicios</div>
 
-                            <div class="description">
-                              Paga tu recibo de CFE, Telmex, Dish y mas...
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!--/ Pago de Servicios -->
+                      <div class="description">
+                        Paga tu recibo de CFE, Telmex, Dish y mas...
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ Pago de Servicios -->
 
-                  <!-- PayJoy -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="" class="sites--option option--green colorbox shadow-lg"
-                        data-toggle="tooltip" data-placement="top" title="Vende equipos con el sistema de crédito de Payjoy y recupera tu ganancia de forma inmediata.">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico4.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Crédito PayJoy</div>
+              <!-- PayJoy -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="" class="sites--option option--green colorbox shadow-lg"
+                  data-toggle="tooltip" data-placement="top" title="Vende equipos con el sistema de crédito de Payjoy y recupera tu ganancia de forma inmediata.">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico4.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title">Crédito PayJoy</div>
 
-                            <div class="description">
-                                Venta/Recepción de Pagos PayJoy
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!--/ PayJoy -->
+                      <div class="description">
+                          Venta/Recepción de Pagos PayJoy
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ PayJoy -->
 
-                  <!-- TAF -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/taf/" class="sites--option option--oran200 colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Promueve la compra de equipos a través del crédito de Telcel y obtén ganancia por ello.">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico5.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title small">
-                              Celular a crédito con Telcel
-                              <small class="font-weight-bold">(Tarjeta Amigo Fácil)</small>
-                            </div>
+              <!-- TAF -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/taf/" class="sites--option option--oran200 colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Promueve la compra de equipos a través del crédito de Telcel y obtén ganancia por ello.">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico5.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title small">
+                        Celular a crédito con Telcel
+                        <small class="font-weight-bold">(Tarjeta Amigo Fácil)</small>
+                      </div>
 
-                            <div class="description">
-                                Venta en TAF
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!--/ TAF -->
+                      <div class="description">
+                          Venta en TAF
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ TAF -->
 
-                  <!-- Trámites -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" id="tramites" class="sites--option option--salm colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Realiza cambios de compañía, recupera números Telcel y obtén ganancias por ello.">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico6.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title small">Cambio de compañía y recuperación de número</div>
+              <!-- Trámites -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" id="tramites" class="sites--option option--salm colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Realiza cambios de compañía, recupera números Telcel y obtén ganancias por ello.">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico6.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title small">Cambio de compañía y recuperación de número</div>
 
-                            <div class="description">
-                                Trámites básicos, Cambio/Activacion de Chips con saldo
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!-- Trámites -->
+                      <div class="description">
+                          Trámites básicos, Cambio/Activacion de Chips con saldo
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!-- Trámites -->
 
-                  <!-- Chips Express -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" id="chips" class="sites--option option--purp colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Vende chips Telcel listos para utilizarse en cualquier celular">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico7.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Venta de chip</div>
+              <!-- Chips Express -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" id="chips" class="sites--option option--purp colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Vende chips Telcel listos para utilizarse en cualquier celular">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico7.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title">Venta de chip</div>
 
-                            <div class="description">
-                                Activación y venta de chips express
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!--/ Chips Express -->
+                      <div class="description">
+                          Activación y venta de chips express
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ Chips Express -->
 
-                  <!-- Pedidos -->
-                  <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                      <a href="https://www.micro-tec.com.mx/pagina/Control_Pedidos" class="sites--option option--blueligth colorbox shadow-lg"
-                       data-toggle="tooltip" data-placement="top" title="Compra los equipos y chips que requieres a través de nuestra tienda virtual y recíbelos en físico en tu tienda.">
-                          <div class="icon">
-                              <img src="assets/images/iconopt/ico8.png" class="img-icon">
-                          </div>
-                          <div class="content">
-                            <div class="title">Comprar nuevos equipos</div>
+              <!-- Pedidos -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="https://www.micro-tec.com.mx/pagina/Control_Pedidos" class="sites--option option--blueligth colorbox shadow-lg"
+                 data-toggle="tooltip" data-placement="top" title="Compra los equipos y chips que requieres a través de nuestra tienda virtual y recíbelos en físico en tu tienda.">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico8.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title">Comprar nuevos equipos</div>
 
-                            <div class="description">
-                                Pedidos en linea
-                            </div>
-                          </div>
-                      </a>
-                  </div>
-                  <!--/ Pedidos -->
+                      <div class="description">
+                          Pedidos en linea
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ Pedidos -->
+              </div>
+
+              <div class="text-center align-self-end pb-3">
+                  <img src="assets/images/home/logo-mic.png" class="img-icon">
               </div>
         </section>
         <!-- content-wrapper ends -->

@@ -2,7 +2,8 @@
 
 .sidebar {
   min-height: calc(100vh - #{$navbar-height});
-  background: $sidebar-dark-bg;
+  // background: $sidebar-dark-bg;
+  background: rgba(255, 255, 229, .72);
   font-family: $type1;
   font-weight: 600;
   padding: 0;
@@ -12,6 +13,9 @@
   -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
   -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
   width: $sidebar-width-lg;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
 
   .nav {
     overflow: hidden;
@@ -24,8 +28,8 @@
       margin: 0;
 //       background: rgb(31,52,111);
 // background: linear-gradient(90deg, rgba(31,52,111,1) 0%, rgba(31,56,108,1) 22%, rgba(27,144,41,1) 100%);
-      background: rgb(232,81,26);
-      background: linear-gradient(0deg, rgba(232,81,26,1) 0%, rgba(233,82,25,1) 48%, rgba(239,113,13,1) 100%);
+      // background: rgb(232,81,26);
+      // background: linear-gradient(0deg, rgba(232,81,26,1) 0%, rgba(233,82,25,1) 48%, rgba(239,113,13,1) 100%);
       padding: .4rem 0;
       // border-top-right-radius: 1rem;
       border-radius: .2rem;
@@ -67,10 +71,13 @@
       .nav-link {
         @include display-flex;
         @include align-items(center);
-        background: #1d3169;
+        // background: #1d3169;
+        background: transparent;
         white-space: pre-wrap;
         padding: $sidebar-menu-padding;
         color: $sidebar-dark-menu-color;
+
+        // color: $sidebar-dark-menu-color;
         @include transition-duration(0.45s);
         transition-property: color;
         -webkit-transition-property: color;
@@ -109,7 +116,7 @@
         }
 
         .menu-title {
-          color: inherit;
+          color: $sidebar-dark-menu-color;
           font-size: $sidebar-menu-font-size;
           line-height: 1;
           vertical-align: middle;
@@ -140,12 +147,13 @@
 
       &.active {
         > .nav-link {
-            background: $sidebar-dark-menu-active-bg;
+            // background: $sidebar-dark-menu-active-bg;
+            background: transparent;
             position: relative;
             i,
             .menu-title,
             .menu-arrow {
-              color: $sidebar-dark-menu-active-color;
+              color: $sidebar-dark-menu-color;
             }
             i {
               &.menu-arrow {
@@ -154,6 +162,11 @@
                 }
               }
             }
+            .menu-title {
+              color: #0a4581;
+            }
+            border: 2px dashed #0a4581 !important;
+
         }
       }
     }
@@ -162,14 +175,17 @@
       margin-top: .5rem;
       > .nav-item {
         > .nav-link {
-          margin: .2rem .4rem;
+          margin: .8rem .4rem;
           flex-wrap: wrap;
-          padding: 0.8rem 0.5rem;
+          padding: 0.46rem 0.5rem;
           align-items: center;
           justify-content: flex-start;
-          border-radius: .2rem;
-          border: 1px solid #a74f0e;
+          border-radius: 1rem;
+          line-height: 1;
+          border: 2px dashed #f07e1a;
           cursor: pointer;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
           @media screen and (max-width: 991px) {
             padding: .4rem 1rem;
             flex-wrap: nowrap;
@@ -180,6 +196,9 @@
           > .nav-link {
             background: $sidebar-dark-menu-hover-bg;
             color: $sidebar-dark-menu-hover-color;
+            .menu-title {
+              color: $sidebar-dark-menu-hover-color;
+            }
           }
         }
       }

@@ -91,7 +91,7 @@ $social-colors: (
 
 ////////// FONTS//
 
-$type1:     'Source Sans Pro', sans-serif;
+$type1:     'Montserrat', sans-serif;
 
 $default-font-size: .875rem; // 14px as base font size
 
@@ -209,7 +209,7 @@ $action-transition-timing-function: ease;
 ////////// BREAD CRUMBS VARIABLES //////////
 
 ////////// SIDEBAR ////////
-$sidebar-width-lg: 240px;
+$sidebar-width-lg: 260px;
 $sidebar-width-mini: 185px;
 $sidebar-width-icon: 70px;
 
@@ -227,12 +227,12 @@ $sidebar-submenu-active-color: #dfe4fa;
 $sidebar-menu-icon-color: $sidebar-menu-color;
 $sidebar-menu-arrow-color: $sidebar-menu-color;
 
-$sidebar-dark-bg: #22356d;
-$sidebar-dark-menu-color: $white;
-$sidebar-dark-menu-active-bg: #15224c;
+$sidebar-dark-bg: #ffffe5;
+$sidebar-dark-menu-color: #f07e1a;
+$sidebar-dark-menu-active-bg: #f07e1a;
 $sidebar-dark-menu-active-color: $white;
 $sidebar-dark-menu-hover-bg: $sidebar-dark-menu-active-bg;
-$sidebar-dark-menu-hover-color: $white;
+$sidebar-dark-menu-hover-color: #ffffe5;
 $sidebar-dark-submenu-color: $sidebar-dark-menu-color;
 $sidebar-dark-submenu-hover-bg: initial;
 $sidebar-dark-submenu-hover-color: #2282b8;

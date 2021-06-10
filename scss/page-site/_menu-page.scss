@@ -3,8 +3,17 @@ $sites: '.sites';
 #{$sites}{
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	height: 88%;
+	justify-content: center;
 	.col-lg-3 {
 		padding-bottom: .8rem;
+	}
+	& > .row {
+		width: 100%;
 	}
 	.info {
 		@include media-breakpoint-down(md) {
@@ -16,7 +25,7 @@ $sites: '.sites';
 		}
 	}
 	.banner-info {
-		margin-bottom: 4rem;
+		// margin-bottom: 4rem;
 		@include media-breakpoint-down(md) {
 			display: flex;
 			margin-bottom: 1.2rem;
@@ -64,61 +73,22 @@ $sites: '.sites';
 		}
 	}
 	&__cardtitle {
-		// background: rgb(255,167,0);
-		// background: linear-gradient(60deg, rgba(255,167,0,1) 0%, rgba(255,68,164,1) 100%);
-		// background: rgb(31,52,111);
-		// background: linear-gradient(180deg, rgba(31,52,111,1) 0%, rgba(31,56,108,1) 22%, rgba(27,144,41,1) 100%);
-		background: rgb(36,44,106);
-		background: linear-gradient(0deg, rgba(36,44,106,1) 0%, rgba(30,42,89,1) 48%, rgba(23,40,69,1) 100%);
-    padding: 0 2rem 2rem;
-
+    color: #ef770e;
     text-align: center;
-    border-radius: 1.5rem;
-    position: relative;
+    font-family: 'Montserrat', sans-serif;
     .title {
-    	// font-family: 'Playfair Display', serif;
-    	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    	color: #f1f1f1;
-    	font-size: 2.8rem;
-			font-weight: 700;
-			padding: .7rem 0 0;
-			margin: 0;
-			@include media-breakpoint-down(md) {
-				font-size: 2rem;
-			}
-			@include media-breakpoint-down(sm) {
-				font-size: 1.6rem;
-			}
+    	font-family: 'Montserrat', sans-serif;
+    	font-size: 4.2rem;
+    	font-weight: 900;
+    	display: block;
+    	-webkit-text-fill-color: #ef770e;
+			-webkit-text-stroke: 3px #fff;
     }
-    .logo-icon {
-    	// max-width: 65%;
-    	// height: auto;
-    	// flex-grow: 1;
-    	@include media-breakpoint-down(md) {
-
-    	}
+    .f-white {
+    	color: #ffffff;
+    	font-size: 1.3rem;
+    	font-weight: 500;
     }
-    &::before {
-			border-radius: 90px 90px 0 0;
-			content: "";
-			position: absolute;
-			top: 3px;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			width: 98%;
-			height: 8px;
-			background: rgb(255,255,255);
-			background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.38559173669467783) 94%, rgba(255,255,255,1) 100%);
-		}
-		@include media-breakpoint-down(md) {
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0rem 1rem 1rem;
-		}
-		// @include media-breakpoint-down(lg)
 	}
 	&--option {
 		background-color: theme-color('primary');
@@ -286,7 +256,7 @@ $sites: '.sites';
 	}
 	&--lile {
 		background: rgb(99,109,176);
-background: linear-gradient(0deg, rgba(99,109,176,1) 0%, rgba(119,141,198,1) 48%, rgba(137,176,222,1) 100%);
+		background: linear-gradient(0deg, rgba(99,109,176,1) 0%, rgba(119,141,198,1) 48%, rgba(137,176,222,1) 100%);
 	}
 	&--oran {
 		background: rgb(233,80,26);

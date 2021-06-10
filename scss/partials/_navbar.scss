@@ -6,13 +6,14 @@
   -webkit-transition: background $action-transition-duration $action-transition-timing-function;
   -moz-transition: background $action-transition-duration $action-transition-timing-function;
   -ms-transition: background $action-transition-duration $action-transition-timing-function;
-  background: rgb(31,52,111);
+  // background: rgb(31,52,111);
+  background: rgba(255, 255, 229, .72);
     // background: linear-gradient(180deg, rgba(31,52,111,1) 0%, rgba(31,56,108,1) 22%, rgba(27,144,41,1) 100%);
   margin: 0.4rem;
   // margin-left: 1.437rem;
   // height: $navbar-full-height;
   // width: auto;
-  margin: 0.4rem;
+  margin: 1rem 0.4rem 0.4rem;
   border-radius: .2rem;
   height: 3rem;
   width: 3rem;
@@ -26,8 +27,8 @@
     -moz-transition: width $action-transition-duration $action-transition-timing-function;
     -ms-transition: width $action-transition-duration $action-transition-timing-function;
     color: $navbar-menu-color;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    // margin-left: .5rem;
+    // margin-right: .5rem;
     width: 100%;
     // height: $navbar-height;
     height: 3rem;
@@ -60,8 +61,12 @@
     .navbar-toggler {
       border: 0;
       color: inherit;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       padding: 0;
+      height: 100%;
+      width: 100%;
+      color: #f07e1a;
+      font-weight: 900;
       &:not(.navbar-toggler-right) {
         @media (max-width: 991px) {
           display: none;

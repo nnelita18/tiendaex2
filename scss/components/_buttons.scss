@@ -64,6 +64,32 @@
     }
   }
 }
+
+.bg-button {
+  background-color: #f07e1a !important;
+  border: 1px solid #f07e1a;
+  border-radius: 1rem;
+  span, strong, i {
+    color: $sidebar-dark-menu-hover-color !important;
+  }
+  i {
+    font-size: 1.8rem;
+  }
+  strong {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  &.wfix {
+    width: 65%;
+    line-height: 1.2;
+  }
+  .fisixe {
+
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
 /*social buttons*/
 @each $color, $value in $social-colors {
   .btn-#{$color} {
