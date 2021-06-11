@@ -26,6 +26,7 @@ $sites: '.sites';
 	}
 	.banner-info {
 		// margin-bottom: 4rem;
+		justify-content: center;
 		@include media-breakpoint-down(md) {
 			display: flex;
 			margin-bottom: 1.2rem;
@@ -78,17 +79,25 @@ $sites: '.sites';
     font-family: 'Montserrat', sans-serif;
     .title {
     	font-family: 'Montserrat', sans-serif;
-    	font-size: 4.2rem;
+    	font-size: 3.2rem;
     	font-weight: 900;
     	display: block;
     	-webkit-text-fill-color: #ef770e;
 			-webkit-text-stroke: 3px #fff;
+			@include media-breakpoint-down(sm) {
+				    font-size: 2.35rem;
+    				line-height: 1.3;
+    	}
     }
     .f-white {
     	color: #ffffff;
     	font-size: 1.3rem;
     	font-weight: 500;
+    	@include media-breakpoint-down(sm) {
+				font-size: 1rem;
+    	}
     }
+
 	}
 	&--option {
 		background-color: theme-color('primary');
@@ -225,8 +234,22 @@ $sites: '.sites';
 			margin-bottom: .6rem;
 		}
 	}
+	.logo-mic {
+		.img-icon {
+			@include media-breakpoint-down(md) {
+				width: 130px;
+				height: auto;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			margin-top: 4rem;
+		}
+	}
 	@include media-breakpoint-down(md) {
 		padding-top: .5rem;
+	}
+	@include media-breakpoint-down(md) {
+		height: auto;
 	}
 }
 

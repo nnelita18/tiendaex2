@@ -28,6 +28,9 @@
       padding-top: $navbar-height;
       width: 100%;
     }
+    @include media-breakpoint-down(sm) {
+      padding-top: 1rem;
+    }
   }
   &.documentation {
     padding-top: 0;

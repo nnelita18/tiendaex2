@@ -42,3 +42,21 @@ code {
   }
 
 }
+
+.container-title {
+  padding-top: 2rem;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
+}
+
+.breadcrumb {
+  background: transparent;
+  .breadcrumb-item {
+    color: $orange-tm;
+    a {
+      color: $blue-tm;
+      font-weight: 600;
+    }
+  }
+}

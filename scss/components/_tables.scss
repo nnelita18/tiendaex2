@@ -39,6 +39,18 @@
   }
   &.table-bordered {
     border-top: 1px solid $border-color;
+    color: $blue-tm;
+    font-weight: 600;
+    thead {
+      th {
+        font-weight: 600;
+      }
+    }
+    tbody {
+      &.bgopa {
+        background-color: $dark-tm;
+      }
+    }
   }
   &.crm_table {
     background: #e3ebff;

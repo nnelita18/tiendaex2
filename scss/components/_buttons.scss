@@ -88,6 +88,14 @@
     font-size: 1.2rem;
     font-weight: 500;
   }
+  .menu-title {
+    text-align: center !important;
+  }
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center;
+  }
 }
 
 /*social buttons*/
