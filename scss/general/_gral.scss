@@ -23,11 +23,14 @@ $box-cmt:'.box-cmt';
 }
 
 .modal-comm {
+	font-family: 'Montserrat', sans-serif;
 	.modal-header {
-		background-color: #d3e2f7;
+		// background-color: #d3e2f7;
+		background-color: $orange-tm;
 	}
 	.modal-content {
-		background: #f4f8fb;
+		// background: #f4f8fb;
+		background-color: $lig2-tm;
 	}
 	.list-cmms {
 		overflow-y: auto;
@@ -36,6 +39,10 @@ $box-cmt:'.box-cmt';
 	    padding: .3rem .5rem;
 	}
 
+}
+
+.bg-opac1 {
+	background-color: $lig-tm !important;
 }
 
 

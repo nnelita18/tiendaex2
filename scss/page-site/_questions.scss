@@ -1,0 +1,88 @@
+$questions: '.questions';
+
+.box-tm {
+ 	padding: 1rem 2rem 2rem;
+ }
+
+%link-gral {
+	background-color: $orange-tm;
+	padding: 1rem 1.5rem;
+	text-align: center;
+	border-radius: 6px;
+	color: #ffffff;
+	font-size: 1.08rem;
+	text-decoration: none;
+}
+
+#{$questions}{
+	background-color: $lig-tm;
+	border-radius: 1rem;
+	 font-family: 'Montserrat', sans-serif;
+	 padding: 2rem;
+	&__accor {
+		.card {
+			border: none;
+			margin-bottom: .5rem;
+			background-color: transparent;
+			.card-header {
+				border: none;
+				padding: 0;
+				.btn-link {
+					@extend %link-gral;
+					font-size: 1.08rem;
+					font-weight: 900;
+				}
+			}
+			.card-body {
+				background-color: $lig2-tm;
+			}
+		}
+	}
+}
+
+
+$carousel-qs: '.carousel-qs';
+
+#{$carousel-qs}{
+	&__inds {
+
+	}
+	&__control {
+
+		@extend %link-gral;
+		position: static;
+		width: 100%;
+	    //opacity: 1;
+	    margin-bottom: .5rem;
+	    font-size: 3rem;
+	    span {
+	    	background-image: none;
+	    }
+	    i {
+	    	line-height: 1;
+	    	font-size: 1em;
+    		//height: 28px;
+	    }
+	    &.carousel-control-prev {
+	    	padding-bottom: 0;
+	    }
+	    &.carousel-control-next {
+	    	padding-top: 0;
+	    }
+	}
+	.carousel-item-next.carousel-item-left,
+	.carousel-item-prev.carousel-item-right {
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+	 }
+	 .carousel-item-next,
+	 .active.carousel-item-right {
+	   -webkit-transform: translate3d(0, -100%, 0);
+	        transform: translate3d(0, -100%, 0);
+	 }
+	 .carousel-item-prev,
+	 .active.carousel-item-left {
+	 -webkit-transform: translate3d(0, +100%, 0);
+	        transform: translate3d(0, +100, 0);
+	 }
+}
