@@ -1,0 +1,72 @@
+$ass-mat: '.ass-mat';
+
+#{$ass-mat}{
+	&__box {
+		height: 400px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			border-radius: 10px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar
+		{
+			width: 12px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar-thumb
+		{
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: $orange-tm;
+		}
+		@include media-breakpoint-down(sm) {
+			// padding: 1.4rem 1rem !important;
+		}
+	}
+}
+
+.mat-box {
+	position: relative;
+	margin-bottom: 1.5rem;
+	.dwn-sm {
+		position: absolute;
+		width: 50px;
+		height: auto;
+		bottom: -12px;
+		right: 12px;
+	}
+	&--modal {
+		justify-content: center;
+
+		.modal-mat {
+
+		}
+		.modal-dwn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+$modal-mat: '.modalMat';
+
+#{$modal-mat}{
+	.close {
+		padding: 0 1rem;
+		opacity: 1;
+		font-size: 3rem;
+		color: #fffefe;
+		background-color: $orange-tm;
+		border-radius: 1rem;
+	}
+
+	.modal-content {
+		background-color: transparent;
+		border: none;
+	}
+}

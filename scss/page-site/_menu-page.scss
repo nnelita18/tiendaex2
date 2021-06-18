@@ -218,12 +218,14 @@ $sites: '.sites';
 
 	}
 	&--navcol {
+		background-color: $lig2-tm;
 		z-index: 1200;
 		// position: static;
 		width: 100%;
 		height: auto;
+		margin: 0;
 		.alert {
-			padding: .5rem;
+			padding: 0 1.6rem;
 
 			@include media-breakpoint-down(sm) {
 				width: 76%;
@@ -328,6 +330,39 @@ $sites: '.sites';
 	&--bicolor {
 		background: rgb(255,167,0);
 		background: linear-gradient(60deg, rgba(255,167,0,1) 0%, rgba(255,68,164,1) 100%);
+	}
+}
+
+.bg-srv {
+	&--dfl {
+		background-color: $lig2-tm;
+	}
+	&--blue {
+		background: rgb(39,70,150);
+		// background: linear-gradient(0deg, rgba(39,70,150,1) 0%, rgba(33,94,169,1) 48%, rgba(72,150,207,1) 100%);
+	}
+	&--pink300 {
+		background: #c63468;
+	}
+	&--green {
+		background: rgb(54,135,44);
+		// background: linear-gradient(0deg, rgba(54,135,44,1) 0%, rgba(104,166,37,1) 48%, rgba(148,198,89,1) 100%);
+	}
+	&--oran {
+		background: rgb(233,80,26);
+		// background: linear-gradient(0deg, rgba(233,80,26,1) 0%, rgba(239,116,12,1) 48%, rgba(239,119,11,1) 100%);
+	}
+	&--oran200 {
+		background: rgb(249,176,48);
+		// background: linear-gradient(0deg, rgba(249,176,48,1) 0%, rgba(249,176,48,1) 48%, rgba(245,158,19,1) 100%);
+	}
+	&--purp {
+		background: rgb(87,80,157);
+		// background: linear-gradient(0deg, rgba(87,80,157,1) 0%, rgba(164,125,182,1) 48%, rgba(203,147,193,1) 100%);
+	}
+	&--blueligth {
+		background: rgb(65,176,240);
+		// background: linear-gradient(0deg, rgba(65,176,240,1) 0%, rgba(63,167,232,1) 48%, rgba(72,150,207,1) 100%);
 	}
 }
 

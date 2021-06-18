@@ -40,33 +40,59 @@ $navmenu: '.navmenu';
 }
 
 .alert-pink {
-	background-color: #fbb7b6;
+	background-color: transparent;
 	display: flex;
     justify-content: space-between;
     align-items: center;
 	p {
 		color: #33527d;
-		font-size: 1.18rem !important;
-		font-weight: 600;
+		font-size: 1.14rem !important;
+		font-weight: 400;
 	}
 	.action-btn {
+		display: flex;
+		padding-top: 0 !important;
 		.btn {
-			padding-left: 50px;
+			padding: 41px 10px 8px!important;
+			margin: 0 .5rem !important;
 			background: {
-				size: 30px 30px;
+				size: 25px auto !important;
 				repeat: no-repeat;
-				position: left 10px center;
+				// position: left 10px center;
 			}
-			font-size: 1rem;
+			font-size: .75rem !important;
 			font-weight: 600;
 		}
 		&--tut {
-			background-color: #3f8ac6 !important;
+			background-color: transparent !important;
 			background-image: url('../images/icons/camera.png');
-		}
 		&--faq {
-			background-color: #81b843 !important;
+			background-color: transparent !important;
 			background-image: url('../images/icons/faq.png');
+		}	}
+
+	}
+}
+.opt-col {
+	.alert {
+		p {
+		color: #ffffff;
+		}
+	}
+	.action-btn {
+		.btn {
+			background-color: #ffffe5 !important;
+    		color: #0a4581 !important;
+    		&:hover {
+    			background-color: #e6e6cd !important;
+    		}
+		}
+	}
+	#cboxClose {
+		border: 2px solid #ffffff !important;
+
+		&.btn-dfl--close {
+			color: #ffffff !important;
 		}
 	}
 }

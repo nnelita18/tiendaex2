@@ -2,6 +2,9 @@ $questions: '.questions';
 
 .box-tm {
  	padding: 1rem 2rem 2rem;
+ 	@include  media-breakpoint-down(sm) {
+ 		padding: 1rem 1rem 2rem;
+ 	}
  }
 
 %link-gral {
@@ -38,6 +41,9 @@ $questions: '.questions';
 			}
 		}
 	}
+	@include media-breakpoint-down(sm) {
+		padding: 2rem .8rem;
+	}
 }
 
 
@@ -52,9 +58,10 @@ $carousel-qs: '.carousel-qs';
 		@extend %link-gral;
 		position: static;
 		width: 100%;
-	    //opacity: 1;
+	    opacity: .8;
 	    margin-bottom: .5rem;
 	    font-size: 3rem;
+	    height: 50px;
 	    span {
 	    	background-image: none;
 	    }
@@ -85,4 +92,15 @@ $carousel-qs: '.carousel-qs';
 	 -webkit-transform: translate3d(0, +100%, 0);
 	        transform: translate3d(0, +100, 0);
 	 }
+}
+
+.accdq-sec {
+	&.only-onecard {
+		.q-content {
+			display: none;
+			&.only-onebtn {
+				display: flex;
+			}
+		}
+	}
 }
