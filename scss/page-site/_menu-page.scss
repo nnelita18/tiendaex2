@@ -225,15 +225,36 @@ $sites: '.sites';
 		height: auto;
 		margin: 0;
 		.alert {
-			padding: 0 1.6rem;
+			padding: 0 1rem !important;
 
 			@include media-breakpoint-down(sm) {
 				width: 76%;
 			}
+			@include media-breakpoint-down(md) {
+				order: 3;
+				width: 100%;
+				text-align: center;
+			}
 		}
 		p {
-			font-size: .86rem;
+			font-size: 1rem !important;
 			margin-bottom: .6rem;
+			@include media-breakpoint-down(sm) {
+				font-size: .8rem !important;
+				margin-bottom: 0;
+			}
+		}
+		.depositos-sald {
+			padding: 0 !important;
+			@include media-breakpoint-down(md) {
+				order: 2;
+			}
+			@include media-breakpoint-down(sm) {
+				width: 48%;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			padding-top: 0.5rem;
 		}
 	}
 	.logo-mic {

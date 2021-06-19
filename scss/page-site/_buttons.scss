@@ -44,7 +44,11 @@ $btnth-orange: #f07e1a;
 		border-radius: 0.4rem;
 		color: #ffffff;
 		font-size: .9rem;
-		padding: 0.5rem 1rem;
+		padding: 0.5rem;
+		@include media-breakpoint-down(md) {
+			padding: 0.3rem .5rem !important;
+			font-size: .8rem !important;
+		}
 	}
 }
 

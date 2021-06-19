@@ -21570,7 +21570,7 @@ dl li {
 .alert-pink p {
   color: #33527d;
   font-size: 1.14rem !important;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .alert-pink .action-btn {
@@ -21661,7 +21661,14 @@ dl li {
   border-radius: 0.4rem;
   color: #ffffff;
   font-size: .9rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .btn-theme--primary {
+    padding: 0.3rem .5rem !important;
+    font-size: .8rem !important;
+  }
 }
 
 .login {
@@ -21997,7 +22004,7 @@ dl li {
 }
 
 .sites--navcol .alert {
-  padding: 0 1.6rem;
+  padding: 0 1rem !important;
 }
 
 @media (max-width: 767.98px) {
@@ -22006,9 +22013,46 @@ dl li {
   }
 }
 
+@media (max-width: 991.98px) {
+  .sites--navcol .alert {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .sites--navcol p {
-  font-size: .86rem;
+  font-size: 1rem !important;
   margin-bottom: .6rem;
+}
+
+@media (max-width: 767.98px) {
+  .sites--navcol p {
+    font-size: .8rem !important;
+    margin-bottom: 0;
+  }
+}
+
+.sites--navcol .depositos-sald {
+  padding: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+  .sites--navcol .depositos-sald {
+    order: 2;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sites--navcol .depositos-sald {
+    width: 48%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sites--navcol {
+    padding-top: 0.5rem;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -22662,6 +22706,13 @@ dl li {
   background-color: #f07e1a;
 }
 
+.ass-mat .card-body {
+  background-color: #ffffe5;
+  border-radius: .5rem;
+  margin-bottom: .5rem;
+  padding: .8rem .5rem;
+}
+
 .mat-box {
   position: relative;
   margin-bottom: 1.5rem;
@@ -22697,6 +22748,24 @@ dl li {
 .modalMat .modal-content {
   background-color: transparent;
   border: none;
+}
+
+.modVideo .close {
+  padding: .5rem 1rem;
+  opacity: 1;
+  font-size: 1.3rem;
+  color: #fffefe;
+  background-color: #f07e1a;
+  border-radius: 1rem;
+  margin-bottom: .5rem;
+}
+
+.modVideo .modal-body {
+  padding: 0;
+}
+
+.modVideo .modal-content {
+  background-color: transparent !important;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

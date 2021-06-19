@@ -26,7 +26,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
-<body class="bg-home">
+<body class="bg-home ">
   <div class="container-scroller d-flex bg-home">
     <!-- partial:./partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -86,7 +86,7 @@
           </a>
         </li>
         <li class="nav-item ">
-          <a id="tour-duds" class="nav-link pageto" href="views/fns-admin/preguntas.html">
+          <a id="tour-duds" class="nav-link pageto" href="views/fns-admin/dudas.html">
             <!-- <i class="mdi mdi-account-search"></i> -->
             <!-- <i class="fas fa-search-dollar"></i> -->
             <span class="menu-title">Dudas o preguntas</span>
@@ -130,13 +130,17 @@
           <a class="navbar-brand close-cbox btn-theme--primary" id="cboxClose" title="Regresar al menú">
             <i class="fas fa-arrow-left mr-2"></i>Regresar al menú</a>
           </a>
-          <div class="alert alert-pink my-1 col-sm-10 col-md-10 depositos-sald">
+          <div class="alert alert-pink my-1 col-sm-12 col-md-12 col-lg-7">
               <p id="modulo_texto">Compra los equipos y chips que requieres a través de nuestra tienda virtual y recíbelos en físico en tu tienda.</p>
-              <div class="action-btn">
-                <a href="" class="btn action-btn--tut">Ver Tutorial</a>
-                <a href="" class="btn action-btn--faq">Dudas o preguntas</a>
-              </div>
+
           </div>
+          <div class="alert-pink depositos-sald">
+            <div class="action-btn">
+              <a href="" class="btn action-btn--tut">Ver Tutorial</a>
+              <a href="" class="btn action-btn--faq">Dudas o preguntas</a>
+            </div>
+          </div>
+
           <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbaTiendaExpress" aria-controls="navbaTiendaExpress" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -334,10 +338,26 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <div class="float-icons">
-    <a href="" class="chat-whats ico-float"></a>
+
+  <!-- Modal Tutorial Video-->
+<div class="modal fade modVideo modal-comm" id="verTutorial" tabindex="-1" aria-labelledby="verTutorialLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe  class="embed-responsive-item" src="//www.youtube.com/embed/0tfkMpuvQ6U" title="Microtec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+  <!-- container-scroller -->
+    <div class="float-icons d-none">
+      <a href="" class="chat-whats ico-float"></a>
+    </div>
 
   <!-- base:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>

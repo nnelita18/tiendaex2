@@ -40,7 +40,7 @@
     $(this).parent().parent().addClass('only-onebtn');
   })
 
-  $(body).on('click', '#services .sites--option', function () {
+/*  $(body).on('click', '#services .sites--option', function () {
     var $bgnavpag = '#ffffe5',
         $this = $(this),
         $idopt = $this.attr('id');
@@ -74,6 +74,21 @@
     }
 
     $('#navcolorbox').css('backgroudColor', $bgnavpag);
+  })*/
+
+  $(document).on('click', '.action-btn--tut', function (e) {
+    e.preventDefault();
+    $('#verTutorial').modal('show');
+  })
+  $(document).on('click', '.action-btn--faq', function (e) {
+    e.preventDefault();
+    let contentReplace = $('#change-content'),
+        $localpage = 'views/fns-admin/dudas.html',
+        pageRedir = $localpage;
+
+    if ( pageRedir !== '' && pageRedir ) {
+      loadContent(pageRedir, contentReplace);
+    }
   })
 
 })(jQuery);
