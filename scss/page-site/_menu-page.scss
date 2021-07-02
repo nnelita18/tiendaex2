@@ -179,6 +179,14 @@ $sites: '.sites';
 		&:hover {
 			text-decoration: none;
 			color: #ffffff;
+					.tooltipst {
+					opacity: 0.95;
+					top: 0;
+					left: -6%;
+					right: -6%;
+					width: 112%;
+					transform: translate3d(0px, -105px, 0px);
+				}
 		}
 		.text-efect {
 			color: white;
@@ -208,6 +216,24 @@ $sites: '.sites';
 		// @include media-breakpoint-down(xs) {
 		// 	justify-content: flex-start;
 		// }
+		&.disabled {
+			background: rgb(231,231,232);
+			background: linear-gradient(90deg, rgba(231,231,232,1) 0%, rgba(219,218,218,1) 48%, rgba(193,193,191,1) 100%);
+			cursor: not-allowed;
+			.icon {
+				background: {
+					image: url('../images/iconopt/icodis.png');
+					size: cover;
+					position: center;
+					repeat: no-repeat;
+				}
+				.img-icon {
+					z-index: -1;
+					position: relative;
+				}
+
+			}
+		}
 		@include media-breakpoint-down(md) {
 			flex-direction: column;
 			padding: .8rem .5rem;
@@ -513,3 +539,6 @@ $sites: '.sites';
 	display: block;
 }
 
+#services {
+	  padding: 3rem 0 4rem;
+}

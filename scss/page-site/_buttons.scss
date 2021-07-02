@@ -52,3 +52,11 @@ $btnth-orange: #f07e1a;
 	}
 }
 
+.swal2-popup .swal2-select option {
+	&:nth-child(5),
+	&:nth-child(6) {
+		color: #aaaaaa !important;
+	}
+}
+
+

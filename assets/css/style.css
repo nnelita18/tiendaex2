@@ -14155,7 +14155,7 @@ a.close.disabled {
 
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
-  transform: translate(0, -50px);
+  transform: scale(0.9);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -20632,6 +20632,62 @@ dl li {
   padding: .8rem;
 }
 
+.tooltipst {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.875rem;
+  word-wrap: break-word;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.tooltipst .arrowst {
+  bottom: -0.4rem;
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.4rem;
+  left: 94px;
+}
+
+.tooltipst .arrowst:before {
+  border-top-color: #f1f2f1 !important;
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+  top: 0;
+  border-width: 0.4rem 0.4rem 0;
+}
+
+.tooltipst__inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 0.25rem;
+  color: #1c2954;
+  background: #f1f2f1;
+  padding: .8rem;
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
 .box-cmt {
   font-size: .82rem;
 }
@@ -20806,7 +20862,6 @@ dl li {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: 100%;
 }
 
 .navbar-fixed-top .main-panel {
@@ -21671,6 +21726,10 @@ dl li {
   }
 }
 
+.swal2-popup .swal2-select option:nth-child(5), .swal2-popup .swal2-select option:nth-child(6) {
+  color: #aaaaaa !important;
+}
+
 .login {
   font-family: 'Montserrat', sans-serif;
 }
@@ -21956,6 +22015,15 @@ dl li {
   color: #ffffff;
 }
 
+.sites--option:hover .tooltipst {
+  opacity: 0.95;
+  top: 0;
+  left: -6%;
+  right: -6%;
+  width: 112%;
+  transform: translate3d(0px, -105px, 0px);
+}
+
 .sites--option .text-efect {
   color: white;
   font-size: 20px;
@@ -21980,6 +22048,24 @@ dl li {
   height: 8px;
   background: white;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.385592) 94%, white 100%);
+}
+
+.sites--option.disabled {
+  background: #e7e7e8;
+  background: linear-gradient(90deg, #e7e7e8 0%, #dbdada 48%, #c1c1bf 100%);
+  cursor: not-allowed;
+}
+
+.sites--option.disabled .icon {
+  background-image: url("../images/iconopt/icodis.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sites--option.disabled .icon .img-icon {
+  z-index: -1;
+  position: relative;
 }
 
 @media (max-width: 991.98px) {
@@ -22310,6 +22396,10 @@ dl li {
   display: block;
 }
 
+#services {
+  padding: 3rem 0 4rem;
+}
+
 .depositos-sald {
   padding: 1rem 2rem 2rem;
 }
@@ -22453,6 +22543,43 @@ dl li {
 .form-tm .form-group label {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+}
+
+.modal-fichasbanco .modal-header {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.modal-fichasbanco .carousel-inner {
+  padding-top: 2rem !important;
+}
+
+.carousel-fichas .carousel-control-prev, .carousel-fichas .carousel-control-next {
+  background: #f07e1a !important;
+  height: 1.6rem !important;
+  opacity: 1;
+  width: 2rem !important;
+}
+
+.carousel-fichas .carousel-indicators {
+  top: -16px !important;
+  bottom: auto;
+}
+
+.carousel-fichas .carousel-indicators li {
+  background-color: #1c4581;
+}
+
+.carousel-fichas .carousel-indicators li.active {
+  background-color: #f07e1a;
+}
+
+.carousel-fichas .carousel-control-prev {
+  left: 25%;
+}
+
+.carousel-fichas .carousel-control-next {
+  right: 25%;
 }
 
 .float-icons {
@@ -22682,6 +22809,24 @@ dl li {
   .q-content__body {
     padding: 1.4rem 1rem !important;
   }
+}
+
+.doubts__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doubts .page {
+  background-color: #f8c000;
+  padding: .6rem .8rem;
+  border-radius: .4rem;
+  margin-bottom: .45rem;
+}
+
+.doubts .page h1 {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .ass-mat__box {
