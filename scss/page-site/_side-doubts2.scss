@@ -1,0 +1,49 @@
+$bg-link: #f8c000;
+$doubts: '.pdoubts';
+
+#{$doubts}{
+	margin: 1rem;
+	&__title {
+		color: $orange-tm;
+	}
+	.card {
+		border: 0;
+		border-radius: 1rem;
+		.card-header {
+			background-color: $orange-tm;
+			// border-top: 1px solid $orange-tm;
+			border: 1px solid $lig-tm;
+			border-radius: .6rem;
+			padding: 0;
+			a {
+				padding: 0.75rem 1.25rem;
+				color: #f1ffff;
+			}
+		}
+		.card-body {
+
+		}
+	}
+
+}
+
+.faq-section .mb-0 > a {
+  display: block;
+  position: relative;
+}
+
+.faq-section .mb-0 > a:after {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  font-weight: 600;
+}
+
+.faq-section .mb-0 > a[aria-expanded="true"]:after {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+}
+
+

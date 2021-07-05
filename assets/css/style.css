@@ -22811,22 +22811,48 @@ dl li {
   }
 }
 
-.doubts__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pdoubts {
+  margin: 1rem;
 }
 
-.doubts .page {
-  background-color: #f8c000;
-  padding: .6rem .8rem;
-  border-radius: .4rem;
-  margin-bottom: .45rem;
+.pdoubts__title {
+  color: #f07e1a;
 }
 
-.doubts .page h1 {
-  font-size: 1.2rem;
-  margin: 0;
+.pdoubts .card {
+  border: 0;
+  border-radius: 1rem;
+}
+
+.pdoubts .card .card-header {
+  background-color: #f07e1a;
+  border: 1px solid rgba(255, 255, 229, 0.8);
+  border-radius: .6rem;
+  padding: 0;
+}
+
+.pdoubts .card .card-header a {
+  padding: 0.75rem 1.25rem;
+  color: #f1ffff;
+}
+
+.faq-section .mb-0 > a {
+  display: block;
+  position: relative;
+}
+
+.faq-section .mb-0 > a:after {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  font-weight: 600;
+}
+
+.faq-section .mb-0 > a[aria-expanded="true"]:after {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
 }
 
 .ass-mat__box {

@@ -6,6 +6,9 @@ $doubts: '.doubts';
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	} 
+	&__links {
+		padding: 0;
 	}
 	.page {
 		background-color: $bg-link;
@@ -16,6 +19,38 @@ $doubts: '.doubts';
     		font-size: 1.2rem;
     		margin: 0;
     	}
+	}
+}
+
+$maxlist: 13;
+$midlelist: $maxlist / 2;
+$secondlist: $midlelist + 1;
+
+@for $i from 1 to $secondlist
+{
+	.doubts__links .row:nth-child(n + #{$i}) .col-lg-8 {
+		margin-left: 24px*$i;
+	}
+}
+
+$x:6;
+
+@for $c from 8 through $maxlist
+{
+	.doubts__links .row:nth-child(n + #{$c}) .col-lg-8 {
+		 	margin-left: 24px*$x;
+		 	$x: $x - 1;
+
+		
+		 // @if $x > $midlelist {
+		 // 	margin-left: -36px*$x;
+		 // 	$x: $x - 1;
+		 // }
+		// @while $x < $midlelist {
+		// 	margin-left: -36px*$x;
+		// 	 $x: $x + 1;
+		// }		
+		
 	}
 }
 
