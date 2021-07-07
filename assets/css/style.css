@@ -22815,6 +22815,46 @@ dl li {
   margin: 1rem;
 }
 
+.pdoubts__header {
+  padding: 1rem 0;
+}
+
+.pdoubts__header .doubts__icon .logo-icon {
+  max-width: 105px;
+  height: auto;
+}
+
+@media (max-width: 991.98px) {
+  .pdoubts__header .doubts__icon {
+    text-align: center;
+  }
+}
+
+.pdoubts__header .titlehead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.pdoubts__header .titlehead .col-theme {
+  color: #f07e1a;
+}
+
+.pdoubts__header .titlehead .navbar-search {
+  width: 100%;
+}
+
+.pdoubts__header .titlehead .navbar-search input.form-control {
+  font-size: 1.1rem;
+}
+
+.pdoubts__header .titlehead .navbar-search .btn-primary {
+  background-color: #0a4581;
+  border-color: #0a4581;
+}
+
 .pdoubts__title {
   color: #f07e1a;
 }
@@ -22822,18 +22862,74 @@ dl li {
 .pdoubts .card {
   border: 0;
   border-radius: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .pdoubts .card .card-header {
   background-color: #f07e1a;
   border: 1px solid rgba(255, 255, 229, 0.8);
-  border-radius: .6rem;
+  border-radius: 0.6rem !important;
   padding: 0;
 }
 
 .pdoubts .card .card-header a {
   padding: 0.75rem 1.25rem;
   color: #f1ffff;
+}
+
+.pdoubts .card .card-body {
+  background-color: rgba(255, 255, 229, 0.8);
+}
+
+.pdoubts .card .card-body .collapse .card-body {
+  margin: .4rem 0;
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
+
+.pdoubts .card .card-body .collapse .card-body .list-group .list-group-item {
+  padding: 0.3rem 1.25rem;
+  font-weight: 600;
+  color: #061737;
+}
+
+.pdoubts .card .card-body .collapse .card-body .list-group .list-group-item:hover {
+  color: #f07e1a;
+  cursor: pointer;
+}
+
+.pdoubts__page .title {
+  color: #0a4581;
+  margin-bottom: 1.4rem;
+}
+
+.pdoubts__page p, .pdoubts__page ul, .pdoubts__page ol, .pdoubts__page li, .pdoubts__page a {
+  font-size: 16px;
+}
+
+.pdoubts__page img {
+  margin: 1rem 0;
+  border: 1px solid #cdcdcd;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.8) !important;
+}
+
+.pdoubts__footer {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.pdoubts__footer .btn-iconlike {
+  margin: 0.4rem;
+}
+
+.pdoubts__footer .btn-iconlike.likeyes {
+  background-color: #f07e1a;
+  border-color: #f07e1a;
+}
+
+.pdoubts__footer .btn-iconlike.disabled {
+  background-color: #cdcdcd;
+  border-color: #cdcdcd;
 }
 
 .faq-section .mb-0 > a {
@@ -22847,6 +22943,7 @@ dl li {
   position: absolute;
   right: 0;
   font-weight: 600;
+  margin-right: 1rem;
 }
 
 .faq-section .mb-0 > a[aria-expanded="true"]:after {

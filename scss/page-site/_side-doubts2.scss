@@ -3,17 +3,53 @@ $doubts: '.pdoubts';
 
 #{$doubts}{
 	margin: 1rem;
+	&__header {
+		padding: 1rem 0;
+		.doubts__icon {
+			.logo-icon {
+				max-width: 105px;
+				height: auto;
+			}
+			@include media-breakpoint-down(md) {
+				text-align: center;
+			}
+		}
+		.titlehead {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			text-align: center;
+			.col-theme {
+				color: $orange-tm;
+			}
+			.navbar-search {
+				width: 100%;
+				input {
+					&.form-control {
+						font-size: 1.1rem;
+					}
+				}
+				.btn-primary {
+					background-color: $blue-tm;
+					border-color: $blue-tm;
+				}
+			}
+		}
+	}
 	&__title {
 		color: $orange-tm;
 	}
+
 	.card {
 		border: 0;
 		border-radius: 1rem;
+		margin-bottom: 0.1rem;
 		.card-header {
 			background-color: $orange-tm;
 			// border-top: 1px solid $orange-tm;
 			border: 1px solid $lig-tm;
-			border-radius: .6rem;
+			border-radius: 0.6rem !important;
 			padding: 0;
 			a {
 				padding: 0.75rem 1.25rem;
@@ -21,7 +57,57 @@ $doubts: '.pdoubts';
 			}
 		}
 		.card-body {
+			background-color: $lig-tm;
+			.collapse {
 
+				.card-body {
+					margin: .4rem 0;
+					background-color: #ffffff;
+					padding: 0.5rem;
+					.list-group {
+						.list-group-item {
+							padding: 0.3rem 1.25rem;
+							font-weight: 600;
+							color: #061737;
+							&:hover {
+								color: $orange-tm;
+								cursor: pointer;
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+	&__page {
+		.title {
+			color: $blue-tm;
+			margin-bottom: 1.4rem;
+			// text-align: center;
+		}
+		p, ul, ol, li, a{
+			font-size: 16px;
+		}
+		img {
+			margin: 1rem 0;
+			border: 1px solid #cdcdcd;
+			box-shadow: 0 0.125rem 0.25rem rgba(0,0,0, 0.8) !important;
+		}
+	}
+	&__footer {
+		text-align: center;
+		padding: 3rem 0;
+		.btn-iconlike {
+			margin: 0.4rem;
+			&.likeyes {
+				background-color: $orange-tm;
+				border-color: $orange-tm;
+			}
+			&.disabled {
+				background-color: #cdcdcd;
+				border-color: #cdcdcd;
+			}
 		}
 	}
 
@@ -38,6 +124,7 @@ $doubts: '.pdoubts';
   position: absolute;
   right: 0;
   font-weight: 600;
+  margin-right: 1rem;
 }
 
 .faq-section .mb-0 > a[aria-expanded="true"]:after {

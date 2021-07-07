@@ -13,7 +13,7 @@
 
   });
 
-  $('body').on('click', '#sidebar .pageto', function( e ) {
+  $('body').on('click', '.pageto', function( e ) {
     e.preventDefault();
     let contentReplace = $('#change-content'),
         $localpage = $(this).attr('href'),
