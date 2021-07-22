@@ -113,7 +113,7 @@
 									<fieldset id="always" class="">
 										<div class="row text-center">
 											<div class="col-md-12">
-												<h5 class="text-left">Datos del Depósito <span id="mostrarFichas" class="badge-warning p-2 small float-right" style="cursor: pointer;">Donde puedo encontrar estos Datos? <i class="mdi mdi-spotlight-beam"></i></span></h5>
+												<h5 class="text-left">Datos del Depósito </h5>
 											</div>
 										</div>
 										<div class="row text-center">
@@ -135,7 +135,7 @@
 												<input type="text" class="form-control" id="datepicker1" name="fecha_deposito" placeholder="Fecha cuando se realizo el depósito" required readonly>
 											</div>
 											<div class="col-md-4 form-group">
-												<label>Banco <span class="required">*</span>
+												<label class="w-100">Banco <span class="required">*</span> <span id="mostrarFichas" class="float-right btn btn-sm btn-warning p-1" style="cursor: pointer;"><i class="mdi mdi-comment-question-outline"></i></span>
 												</label>
 												<select class="form-control" name="banco" id="banco" required="">
 													<option selected="" value="">Seleccione un Banco</option>
@@ -346,18 +346,18 @@
 
 <!-- Modal Dafult Fichas SelectBanco-->
 <div class="modal fade modal-comm modal-fichasbanco" id="modalSelBanco" tabindex="-1" aria-labelledby="modalSelBancoLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalSelBancoLabel">Primero selecciona el <strong>Banco</strong> en donde realizaste el <strong>Depósito</strong></h5>
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title" id="modalSelBancoLabel">Aviso!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img src="assets/images/depositos/selBanco.jpg" class="d-block w-100" alt="Selecciona el Banco en que realizaste el deposito">
+        <h4>Primero selecciona el <strong>Banco</strong> en donde realizó el <strong>Depósito</strong></h4>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Entendido!</button>
       </div>
     </div>
@@ -600,13 +600,13 @@
 		    numbank         = this.value;
 
 		if (numbank !== '') {
-			if (tagInfoRefencia.hasClass('badge-warning')) {
-				tagInfoRefencia.removeClass('badge-warning');
-				tagInfoRefencia.addClass('badge-info');
+			if (tagInfoRefencia.hasClass('btn-warning')) {
+				tagInfoRefencia.removeClass('btn-warning');
+				tagInfoRefencia.addClass('btn-info');
 			}
 		} else {
-			tagInfoRefencia.removeClass('badge-info');
-			tagInfoRefencia.addClass('badge-warning');
+			tagInfoRefencia.removeClass('btn-info');
+			tagInfoRefencia.addClass('btn-warning');
 		}
 	});
 	$('#mostrarFichas').on('click', function (){

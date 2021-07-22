@@ -22907,8 +22907,25 @@ dl li {
   font-size: 16px;
 }
 
+.pdoubts__page strong {
+  font-weight: 600;
+}
+
+.pdoubts__page a {
+  color: #e55153;
+  font-weight: 600;
+}
+
+.pdoubts__page .orderlist-main {
+  font-weight: 500;
+}
+
+.pdoubts__page .orderlist-main ol, .pdoubts__page .orderlist-main ul {
+  font-weight: 400;
+}
+
 .pdoubts__page img {
-  margin: 1rem 0;
+  margin: 0.3rem 0;
   border: 1px solid #cdcdcd;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.8) !important;
 }

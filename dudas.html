@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>CRM - Microtec</title>
   <!-- base:css -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="vendors/datepicker/bootstrap-datepicker.min.css">
@@ -18,32 +19,49 @@
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
   <!-- inject:css -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
-<body class="bg-home">
+<body class="bg-home ">
   <div class="container-scroller d-flex bg-home">
     <!-- partial:./partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul id="navmenu" class="nav">
         <li class="nav-item sidebar-category">
           <a class="navbar-brand brand-logo m-1" href="#">
-            <img src="assets/images/options/tienda-logo.png" class="img-fluid" alt="TIENDA EXPRESS"/>
+            <img src="assets/images/home/logo-tienda.png" class="img-fluid" alt="TIENDA EXPRESS"/>
           </a>
         </li>
         <li class="nav-item">
-          <a  href="#" class="nav-link py-3 justify-content-center shadow-sm" style="background-color: #e65119;">
-            <!-- <i class="mdi mdi-comment-question-outline"></i> -->
-            <strong>Bienvenido</strong><i class="fas fa-user-check ml-2"></i>
-            <span class="menu-title d-block w-100 ml-0 mt-2 font-weight-bold"><?php echo $_SESSION["tiendaExpress_nombre"]; ?></span>
+          <a  href="#" class="nav-link py-2 justify-content-center shadow-sm bg-button">
+            <i class="mdi mdi-account-circle"></i>
+            <strong>¡BIENVENIDO!</strong><i class="fas fa-user-check ml-2"></i>
+            <span class="menu-title d-block w-100 ml-0 mt-2 font-weight-bold"><?php echo $_SESSION["tiendaExpress_nombre"]; ?>Luis Juárez Cianca</span>
           </a>
         </li>
         <li class="nav-item active">
+          <a id="tour-movsal" class="nav-link pageto" href="views/fns-admin/movimientos-saldo.html" data-toggle="modal" data-target="#saldoModal">
+            <!-- <i class="mdi mdi-account-search"></i> -->
+            <!-- <i class="fas fa-search-dollar"></i> -->
+            <span class="menu-title">Inicio</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a id="tour-dep" class="nav-link pageto" href="views/fns-admin/material.html">
+            <!-- <i class="mdi mdi-folder-plus"></i> -->
+            <!-- <i class="fas fa-file-invoice-dollar"></i> -->
+            <span class="menu-title">Material descargable</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="#" class="nav-link" id="startTourBtn">
             <!-- <i class="mdi mdi-comment-question-outline"></i> -->
-            <i class="fas fa-comment-alt"></i>
+            <!-- <i class="fas fa-comment-alt"></i> -->
             <span class="menu-title">¡Conozcamos la plataforma!</span>
           </a>
         </li>
@@ -57,38 +75,45 @@
         <li class="nav-item ">
           <a id="tour-movsal" class="nav-link pageto" href="views/fns-admin/movimientos-saldo.html" data-toggle="modal" data-target="#saldoModal">
             <!-- <i class="mdi mdi-account-search"></i> -->
-            <i class="fas fa-search-dollar"></i>
+            <!-- <i class="fas fa-search-dollar"></i> -->
             <span class="menu-title">Movimientos de saldo</span>
           </a>
         </li>
         <li class="nav-item ">
-          <a id="tour-ganan" class="nav-link" href="#">
+          <a id="tour-ganan" class="nav-link pageto" href="views/fns-admin/mis-ganancias.html">
             <!-- <i class="mdi mdi-account-search"></i> -->
-            <i class="fas fa-search-dollar"></i>
+            <!-- <i class="fas fa-search-dollar"></i> -->
             <span class="menu-title">Mis ganancias</span>
           </a>
         </li>
         <li class="nav-item ">
-          <a id="tour-duds" class="nav-link" href="#">
+          <a id="tour-duds" class="nav-link pageto" href="views/fns-admin/dudas2.html">
             <!-- <i class="mdi mdi-account-search"></i> -->
-            <i class="fas fa-search-dollar"></i>
-            <span class="menu-title">Dudas o preguntas</span>
+            <!-- <i class="fas fa-search-dollar"></i> -->
+            <span class="menu-title">Dudas</span>
           </a>
         </li>
-        <hr>
         <li class="nav-item ">
           <a id="tour-exit" onclick="cerrar_sesion()"  href="#" class="nav-link">
             <!-- <i class="mdi mdi-folder-plus"></i> -->
-            <i class="fas fa-sign-out-alt"></i>
-            <span class="menu-title">SALIR</span>
+            <!-- <i class="fas fa-sign-out-alt"></i> -->
+            <span class="menu-title">Salir</span>
           </a>
+        </li>
+        <hr>
+        <li class="nav-item justify-content-center">
+          <div class="bg-button wfix text-center p-1 mx-auto">
+            <span>Saldo actual</span>
+            <br>
+            <span class="fisixe">$635,400</span>
+          </div>
         </li>
 
       </ul>
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper position-relative">
-      <nav id="hmb" class="navbar col-lg-12 col-12 px-0 py-0 d-flex flex-row shadow-sm">
+      <nav id="hmb" class="navbar col-lg-12 col-12 px-0 py-0 d-flex flex-row shadow-sm d-no">
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-start">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-arrow-collapse-horizontal"></span>
@@ -102,143 +127,314 @@
       </nav>
       <!-- partial -->
       <div class="main-panel" id="change-content">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sites--navcol d-none">
-          <a class="navbar-brand close-cbox btn-dfl--close" id="cboxClose" title="Regresar">
-            <i class="fas fa-arrow-left mr-2"></i>Regresar al menú</a>
-          </a>
-          <div class="alert alert-pink mx-3 my-1 col-sm-10 col-md-10">
-              <p>Venta de Planes Tarifarios</p>
-              <div class="action-btn">
-                <a href="" class="btn btn-info action-btn--tut">Ver Tutorial</a>
-                <a href="" class="btn btn-success action-btn--faq">Preguntas Frecuentes</a>
-              </div>
-          </div>
-          <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbaTiendaExpress" aria-controls="navbaTiendaExpress" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse" id="navbaTiendaExpress">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active d-none">
-                      <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
+        <section class="pdoubts">
+          <div class="row justify-content-center mb-3">
+            <div class="col-10 container-title">
+              <div id="banner-title" class="sites__cardtitle ">
+                <span class="title">Dudas</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row justify-content-center pdoubts__header">
+                <div class="col-lg-2">
+                  <div class="doubts__icon">
+                    <img src="assets/images/icons/faqbig.png" alt="FAQ" class="img-fluid logo-icon w-75">
+                  </div>
+                </div>
+                <div class="col-lg-6 titlehead">
 
-                  </li>
-              </ul>
-          </div>
-        </nav>
+                  <h2 class="mb-3">Hola, ¿Cómo podemos <strong class="col-theme">ayudarte</strong>?</h2>
 
-<section class="doubts">
-  <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-lg-5 ">
-          <div class="doubts__icon">
-            <img src="assets/images/icons/faqbig.jpg" alt="FAQ" class="img-fluid logo-icon">
+                  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group w-100">
+                      <input type="text" class="form-control bg-light small" placeholder="Escribe tu duda.." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"> <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col-12 pdoubts__theme">
+
+          <div class="flex flex-column mb-5 mt-4 faq-section ">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="accordion" id="accdudas">
+                  <div class="card">
+                    <div class="card-header" id="heading-1">
+                      <h5 class="mb-0">
+                        <a class="" role="button" data-toggle="collapse" href="#coldds-1" aria-expanded="false" aria-controls="coldds-1">
+                          USO DE LA PLATAFORMA
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="coldds-1" class="collapse" data-parent="#accdudas" aria-labelledby="heading-1">
+                      <div class="card-body">
+                        <div class="list-group">
+                          <a class="list-group-item pageto" href="views/dudas/res-1.html">¿Qué es Tienda Express?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-2.html">¿Qué o cuanto requiero comprar para ser cliente mayorista?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-3.html">¿Qué puedo realizar con tienda Express?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-4.html">Tienda Express, ¿tiene algún costo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-5.html">No recuerdo mi contraseña para ingresar a la plataforma.</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-6.html">¿Puedo abrir mi sesión en diferentes dispositivos?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-7.html">Al ingresar a cualquier botón me aparece el mensaje “Red no disponible” o “Error”</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-8.html">La plataforma se queda ejecutando un proceso y no indica si se ha realizado correctamente.</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-9.html">Mi sesión ha caducado, ¿qué debo hacer?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-10.html">¿Con quién me comunico en caso de problemas con la plataforma?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="heading-2">
+                      <h5 class="mb-0">
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-2" aria-expanded="false" aria-controls="coldds-2">
+                          DEPÓSITOS
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="coldds-2" class="collapse" data-parent="#accdudas" aria-labelledby="heading-2">
+                      <div class="card-body">
+                        <div class="list-group">
+                          <a class="list-group-item pageto" href="views/dudas/res-21.html">¿Qué es “bolsa de saldo”?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-22.html">¿Para qué puedo utilizar la bolsa de saldo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-23.html">¿Qué pasa si no tengo saldo disponible?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-24.html">¿Debo tener una cantidad mínima de saldo para utilizar Tienda Express?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-25.html">¿Cómo puedo obtener saldo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-26.html">¿Cuál es la cantidad mínima y máxima que se puede depositar a la bolsa de saldo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-27.html">¿Cómo reporto mi depósito de saldo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-28.html">Horarios para reportar saldo</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-29.html">¿En cuánto tiempo se ve reflejado mi depósito de saldo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-210.html">No se ve reflejado el depósito de saldo</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-211.html">¿Dónde puedo revisar los depósitos que he realizado?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="heading-3">
+                      <h5 class="mb-0">
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-3" aria-expanded="false" aria-controls="coldds-3">
+                          MOVIMIENTOS DE SALDO
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="coldds-3" class="collapse" data-parent="#accdudas" aria-labelledby="heading-3">
+                      <div class="card-body">
+                        <div class="list-group">
+                          <a class="list-group-item pageto" href="views/dudas/res-31.html">¿Qué información puedo revisar en "Movimientos de saldo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-32.html">¿Cómo cobro mis comisiones?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="heading-4">
+                      <h5 class="mb-0">
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-4" aria-expanded="false" aria-controls="coldds-4">
+                          RECARGAS
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="coldds-4" class="collapse" data-parent="#accdudas" aria-labelledby="heading-4">
+                      <div class="card-body">
+                        <div class="list-group">
+                          <a class="list-group-item pageto" href="views/dudas/res-41.html">¿Cómo realizar una recarga? </a>
+                          <a class="list-group-item pageto" href="views/dudas/res-42.html">¿La plataforma cobra comisión por cada recarga?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-43.html">El cliente indica que no le llegó la recarga, pero el sistema muestra que se realizó correctamente.</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-44.html">¿Se pueden cancelar recargas?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-45.html">El sistema marca error al realizar una recarga</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-46.html">¿Cómo verificar que se aplicó correctamente la recarga?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-47.html">Horario para realizar recargas</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="heading-5">
+                      <h5 class="mb-0">
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-5" aria-expanded="false" aria-controls="coldds-5">
+                          PAGO DE SERVICIOS
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="coldds-5" class="collapse show" data-parent="#accdudas" aria-labelledby="heading-5">
+                      <div class="card-body">
+                        <div class="list-group">
+                          <a class="list-group-item pageto" href="views/dudas/res-51.html">¿Qué servicios puedo cobrar?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-52.html">¿Cómo realizó un cobro de servicio?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-53.html">¿Cuál es el número de referencia de cada servicio?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-54.html">¿Puedo realizar un cobro si el cliente no lleva su recibo?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-55.html">¿Se pueden cobrar recibos vencidos?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-56.html">¿En cuánto tiempo se ve reflejado el pago de servicio?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-57.html">¿La plataforma cobra comisión por realizar el pago de servicios?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-58.html">En monto, ¿debo colocar la cantidad a pagar con o sin la comisión incluida?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-59.html">El cliente pago su servicio, pero indica que no se ve reflejado en la compañía correspondiente.</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-510.html">El sistema marca error al realizar un pago de servicio</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-511.html">¿Se puede cancelar un pago de servicio?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-512.html">¿Cómo verificar que se aplicó correctamente un pago de servicio?</a>
+                          <a class="list-group-item pageto" href="views/dudas/res-513.html">Horario para realizar pago de servicios</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="heading-6">
+                      <h5 class="mb-0">
+                        <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-6" aria-expanded="false" aria-controls="coldds-6">
+                          CAMBIO DE COMPAÑÍA
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="coldds-6" class="collapse" data-parent="#accdudas" aria-labelledby="heading-6">
+                      <div class="card-body">
+                        <div class="list-group">
+                          <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                          <a class="list-group-item pageto" href="views/dudas/respuesta2.html">¿Cómo realizó el proceso de cambio de compañía?</a>
+                          <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                          <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-header" id="heading-7">
+                    <h5 class="mb-0">
+                      <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-7" aria-expanded="false" aria-controls="coldds-7">
+                        RECUPERACIÓN DE NÚMERO
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="coldds-7" class="collapse" data-parent="#accdudas" aria-labelledby="heading-7">
+                    <div class="card-body">
+                      <div class="list-group">
+                        <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                        <a class="list-group-item">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
+                        <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                        <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading-8">
+                    <h5 class="mb-0">
+                      <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-8" aria-expanded="false" aria-controls="coldds-8">
+                        VENTA DE CHIPS
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="coldds-8" class="collapse" data-parent="#accdudas" aria-labelledby="heading-8">
+                    <div class="card-body">
+                      <div class="list-group">
+                        <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                        <a class="list-group-item">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
+                        <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                        <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading-9">
+                    <h5 class="mb-0">
+                      <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-9" aria-expanded="false" aria-controls="coldds-9">
+                        CELULAR CON CRÉDITO PAYJOY
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="coldds-9" class="collapse" data-parent="#accdudas" aria-labelledby="heading-9">
+                    <div class="card-body">
+                      <div class="list-group">
+                        <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                        <a class="list-group-item">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
+                        <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                        <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="heading-10">
+                    <h5 class="mb-0">
+                      <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-10" aria-expanded="false" aria-controls="coldds-10">
+                        COMPRA DE NUEVOS EQUIPOS
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="coldds-10" class="collapse" data-parent="#accdudas" aria-labelledby="heading-10">
+                    <div class="card-body">
+                      <div class="list-group">
+                        <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                        <a class="list-group-item">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
+                        <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                        <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading-11">
+                    <h5 class="mb-0">
+                      <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-11" aria-expanded="false" aria-controls="coldds-11">
+                        VENTA DE PLANES TARIFARIOS TELCEL
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="coldds-11" class="collapse" data-parent="#accdudas" aria-labelledby="heading-11">
+                    <div class="card-body">
+                      <div class="list-group">
+                        <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                        <a class="list-group-item">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
+                        <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                        <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading-12">
+                    <h5 class="mb-0">
+                      <a class="collapsed" role="button" data-toggle="collapse" href="#coldds-12" aria-expanded="false" aria-controls="coldds-12">
+                        CELULAR A CRÉDITO TELCEL
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="coldds-12" class="collapse" data-parent="#accdudas" aria-labelledby="heading-12">
+                    <div class="card-body">
+                      <div class="list-group">
+                        <a class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                        <a class="list-group-item">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</a>
+                        <a class="list-group-item">exercitation ullamco laboris nisi ut aliquip ex ea commodo</a>
+                        <a class="list-group-item">Duis aute irure dolor in reprehenderit in voluptate velit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-        </div>
-        <div class="col-lg-7 doubts__links">
+                </div>
 
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Uso de la plataforma</h1>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Depósitos de saldo</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Movimientos de saldo</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Mis ganancias</h1>
-              </div>
-            </div>
-          </div>
+        </section>
 
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Recargas de tiempo aire</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Pago de servicios</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Cambio de compañía</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Recuperación de número</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Venta de chips</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Celular con crédito payjoy</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Compra de nuevos equipos</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Venta de planes Telcel</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-8 col-lg-8 col-12">
-              <div class="page">
-                <h1>Celular a crédito con Telcel</h1>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
         <!-- content-wrapper ends -->
         <!-- partial:./partials/_footer.html -->
         <footer class="footer d-none">
@@ -258,10 +454,26 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <div class="float-icons">
-    <a href="" class="chat-whats ico-float"></a>
+
+  <!-- Modal Tutorial Video-->
+<div class="modal fade modVideo modal-comm" id="verTutorial" tabindex="-1" aria-labelledby="verTutorialLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe  class="embed-responsive-item" src="//www.youtube.com/embed/0tfkMpuvQ6U" title="Microtec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+  <!-- container-scroller -->
+    <div class="float-icons d-none">
+      <a href="" class="chat-whats ico-float"></a>
+    </div>
 
   <!-- base:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
