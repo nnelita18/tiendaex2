@@ -22901,6 +22901,8 @@ dl li {
 .pdoubts__page .title {
   color: #0a4581;
   margin-bottom: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
 
 .pdoubts__page p, .pdoubts__page ul, .pdoubts__page ol, .pdoubts__page li, .pdoubts__page a {
