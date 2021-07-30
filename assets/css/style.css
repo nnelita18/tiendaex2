@@ -22932,6 +22932,10 @@ dl li {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.8) !important;
 }
 
+.pdoubts__page img.no-shadow {
+  box-shadow: none !important;
+}
+
 .pdoubts__footer {
   text-align: center;
   padding: 3rem 0;
