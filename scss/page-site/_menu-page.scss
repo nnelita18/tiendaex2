@@ -6,9 +6,10 @@ $sites: '.sites';
 	font-family: 'Montserrat', sans-serif;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: flex-start;
-	height: 88%;
-	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100vh;
 	.col-lg-3 {
 		padding-bottom: .8rem;
 	}
@@ -296,12 +297,21 @@ $sites: '.sites';
 	}
 	@include media-breakpoint-down(md) {
 		padding-top: .5rem;
-	}
-	@include media-breakpoint-down(md) {
 		height: auto;
 	}
-}
 
+}
+	@media (min-width: 960px) and (max-height: 780px){
+		.sites,
+		#sidebar {
+			height: auto;
+		}
+		.logo-mic {
+			.img-icon {
+				margin-top: 3.8rem;
+			}
+		}
+	}
 .bg-home {
 	background: {
 		image: url('../images/home/bg-tienda.jpg');
@@ -324,7 +334,7 @@ $sites: '.sites';
 	}
 	&--blueligth {
 		background: rgb(65,176,240);
-		background: linear-gradient(0deg, rgba(65,176,240,1) 0%, rgba(63,167,232,1) 48%, rgba(72,150,207,1) 100%);
+		background: linear-gradient(0deg, rgba(65,176,240,1) 0%, rgba(63,167,232,1) 48%, rgba(120,185,232,1) 100%);
 	}
 	&--lile {
 		background: rgb(99,109,176);
@@ -377,6 +387,14 @@ $sites: '.sites';
 	&--bicolor {
 		background: rgb(255,167,0);
 		background: linear-gradient(60deg, rgba(255,167,0,1) 0%, rgba(255,68,164,1) 100%);
+	}
+	&--blue200 {
+		background: rgb(23,31,114);
+		background: linear-gradient(0deg, rgba(23,31,114,1) 0%, rgba(91,108,208,1) 58%, rgba(72,89,193,1) 100%);
+	}
+	&--grayligth {
+		background: rgb(52,105,217);
+background: linear-gradient(0deg, rgba(52,105,217,1) 0%, rgba(57,154,217,1) 58%, rgba(97,183,238,1) 100%);
 	}
 }
 
@@ -540,5 +558,5 @@ $sites: '.sites';
 }
 
 #services {
-	  padding: 3rem 0 4rem;
+	  padding: 0.5rem 0 0.5rem;
 }

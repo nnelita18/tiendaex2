@@ -1,7 +1,10 @@
 /* Sidebar */
 
 .sidebar {
-  min-height: calc(100vh - #{$navbar-height});
+  // min-height: calc(100vh - #{$navbar-height});
+  min-height: 100vh;
+  overflow: scroll;
+  height: 100vh;
   // background: $sidebar-dark-bg;
   background: rgba(255, 255, 229, .72);
   font-family: $type1;
@@ -22,7 +25,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     margin-bottom: 60px;
-
+    min-height: 100vh;
     .sidebar-category {
       text-align: center;
       margin: 0;

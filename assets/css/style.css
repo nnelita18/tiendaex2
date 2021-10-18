@@ -20906,7 +20906,9 @@ dl li {
 
 /* Sidebar */
 .sidebar {
-  min-height: calc(100vh - 65px);
+  min-height: 100vh;
+  overflow: scroll;
+  height: 100vh;
   background: rgba(255, 255, 229, 0.72);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -20927,6 +20929,7 @@ dl li {
   flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 60px;
+  min-height: 100vh;
 }
 
 .sidebar .nav .sidebar-category {
@@ -21823,9 +21826,10 @@ dl li {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  height: 88%;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .sites .col-lg-3 {
@@ -22157,12 +22161,17 @@ dl li {
 @media (max-width: 991.98px) {
   .sites {
     padding-top: .5rem;
+    height: auto;
   }
 }
 
-@media (max-width: 991.98px) {
-  .sites {
+@media (min-width: 960px) and (max-height: 780px) {
+  .sites,
+  #sidebar {
     height: auto;
+  }
+  .logo-mic .img-icon {
+    margin-top: 3.8rem;
   }
 }
 
@@ -22186,7 +22195,7 @@ dl li {
 
 .option--blueligth {
   background: #41b0f0;
-  background: linear-gradient(0deg, #41b0f0 0%, #3fa7e8 48%, #4896cf 100%);
+  background: linear-gradient(0deg, #41b0f0 0%, #3fa7e8 48%, #78b9e8 100%);
 }
 
 .option--lile {
@@ -22248,6 +22257,16 @@ dl li {
 .option--bicolor {
   background: #ffa700;
   background: linear-gradient(60deg, #ffa700 0%, #ff44a4 100%);
+}
+
+.option--blue200 {
+  background: #171f72;
+  background: linear-gradient(0deg, #171f72 0%, #5b6cd0 58%, #4859c1 100%);
+}
+
+.option--grayligth {
+  background: #3469d9;
+  background: linear-gradient(0deg, #3469d9 0%, #399ad9 58%, #61b7ee 100%);
 }
 
 .bg-srv--dfl {
@@ -22397,7 +22416,93 @@ dl li {
 }
 
 #services {
-  padding: 3rem 0 4rem;
+  padding: 0.5rem 0 0.5rem;
+}
+
+.subopt {
+  margin: 0.6rem;
+  text-align: center;
+}
+
+.subopt__item {
+  text-align: center;
+  background-color: #8ac440;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  z-index: 9993;
+  height: 100%;
+}
+
+.subopt__item img {
+  border-radius: 0.3rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.subopt__item--noready {
+  position: relative;
+}
+
+.subopt__item--noready .subopt-title {
+  position: absolute !important;
+  font-size: 2.5rem !important;
+  color: #352e35 !important;
+  font-weight: 700 !important;
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 7rem;
+  line-height: 47px;
+  width: 100%;
+  text-shadow: 2px 2px #feffe5;
+  text-decoration: none;
+}
+
+.subopt__item:hover {
+  text-decoration: none;
+}
+
+.subopt--darkblue {
+  background-color: #171f72;
+}
+
+.subopt--lgblue {
+  background-color: #3469d9;
+}
+
+.subopt--orange {
+  background-color: #ef770b;
+}
+
+.subopt .subopt-title {
+  color: #ffffff;
+  font-size: 0.92rem;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.modal-suboption .modal-title {
+  color: #0056b3;
+}
+
+.modal-suboption .modal-content {
+  background-color: #ffffe5;
+}
+
+.modal-suboption--underc .close {
+  font-size: 4rem;
+  color: #f07e1a;
+  opacity: 1;
+}
+
+.modal-suboption--underc .modal-content {
+  padding: 0;
+  height: 520px;
+  width: 520px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .depositos-sald {

@@ -1,0 +1,93 @@
+$subopt: '.subopt';
+
+#{$subopt}{
+	margin: 0.6rem;
+	text-align: center;
+	&__item {
+		text-align: center;
+		background-color: #8ac440;
+		padding: 0.3rem;
+		border-radius: 0.3rem;
+		cursor: pointer;
+		display: inline-block;
+	    position: relative;
+	    z-index: 9993;
+	    height: 100%;
+		img {
+			border-radius: 0.3rem;
+			margin: 0 auto;
+    		display: block;
+		}
+		&--noready {
+			// height: 420px;
+			position: relative;
+			.subopt-title{
+				position: absolute !important;
+				font-size: 2.5rem !important;
+				color: #352e35 !important;
+				font-weight: 700 !important;
+				transform: rotate( -15deg );
+				position: absolute;
+				top: 7rem;
+				line-height: 47px;
+				width: 100%;
+				text-shadow: 2px 2px #feffe5;
+				text-decoration: none;
+			}
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&--darkblue {
+		background-color: #171f72;
+	}
+	&--lgblue {
+		background-color: #3469d9;
+	}
+	&--orange {
+		background-color: #ef770b;
+	}
+	.subopt-title {
+		color: #ffffff;
+		font-size: 0.92rem;
+		margin: 0.5rem 0;
+		font-weight: 600;
+	}
+}
+
+.modal-suboption {
+	.modal-title {
+		color: #0056b3;
+	}
+	.modal-content {
+		background-color: #ffffe5;
+	}
+	&--underc {
+		.close {
+			font-size: 4rem;
+			color: #f07e1a;
+			opacity: 1;
+		}
+		.modal-content  {
+			// background: {
+			// 	// color: ;
+			// 	image: url('../images/icons/yellow-triangle.png');
+			// 	size: contain;
+			// 	position: top center;
+			// 	repeat: no-repeat;
+			// }
+			padding: 0;
+			height: 520px;
+			width: 520px;
+			text-align: center;
+			border-radius: 50%;
+		}
+	}
+	&--bluedark {
+
+	}
+}
+
+
+

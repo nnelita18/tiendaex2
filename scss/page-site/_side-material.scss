@@ -21,7 +21,7 @@ $ass-mat: '.ass-mat';
 		{
 			border-radius: 10px;
 			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-			background-color: $orange-tm;
+			background-color: color(primary);
 		}
 		@include media-breakpoint-down(sm) {
 			// padding: 1.4rem 1rem !important;
@@ -67,7 +67,7 @@ $modal-mat: '.modalMat';
 		opacity: 1;
 		font-size: 3rem;
 		color: #fffefe;
-		background-color: $orange-tm;
+		background-color: color(primary);
 		border-radius: 1rem;
 	}
 

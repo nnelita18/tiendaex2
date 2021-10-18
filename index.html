@@ -210,8 +210,8 @@
 
               <!-- Pago de Servicios -->
               <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                <a href="https://www.micro-tec.com.mx/pagina/pagoExpress" id="pago_servicios" class="sites--option option--oran colorbox shadow-lg"
-                 data-toggle="tooltip" data-placement="top" title="Cobra los servicios más solicitados por tus clientes y genera ganancias (Telmex, Totalplay, CFE, etc.)">
+                <a href="" id="pago_servicios" class="sites--option option--oran shadow-lg"title="Cobra los servicios más solicitados por tus clientes y genera ganancias (Telmex, Totalplay, CFE, etc.)"
+                  data-toggle="modal" data-target="#subPagoservs">
                     <div class="icon">
                         <img src="assets/images/iconopt/ico3.png" class="img-icon">
                     </div>
@@ -228,8 +228,7 @@
 
               <!-- PayJoy -->
               <div class="col-xl-3 col-lg-3 col-md-4 col-6">
-                <a href="" class="sites--option option--green colorbox shadow-lg"
-                  data-toggle="tooltip" data-placement="top" title="Vende equipos con el sistema de crédito de Payjoy y recupera tu ganancia de forma inmediata.">
+                <a href="" class="sites--option option--green colorbox shadow-lg"  title="Vende equipos con el sistema de crédito de Payjoy y recupera tu ganancia de forma inmediata." data-toggle="modal" data-target="#subPayjoy">
                     <div class="icon">
                         <img src="assets/images/iconopt/ico4.png" class="img-icon">
                     </div>
@@ -318,11 +317,46 @@
                 </a>
               </div>
               <!--/ Pedidos -->
-              </div>
 
-              <div class="text-center align-self-end pb-3 logo-mic">
-                  <img src="assets/images/home/logo-mic.png" class="img-icon">
+              <!-- Adelantos -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="" class="sites--option option--blue200 colorbox shadow-lg" data-toggle="modal" data-target="#subAdelantos" title="Financiamiento de celulares en pocos pasos:">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico9.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title small">Tu celular a cuotas con Adelantos</div>
+
+                      <div class="description">
+                          Sólo con tu cédula, llévate tu celular y págalo en cuotas.
+                      </div>
+                    </div>
+                </a>
               </div>
+              <!--/ Adelantos -->
+
+              <!-- Telmex -->
+              <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <a href="" class="sites--option option--grayligth colorbox shadow-lg" data-toggle="modal" data-target="#subTelmex" title="Elige la velocidad y los servicios que deseas">
+                    <div class="icon">
+                        <img src="assets/images/iconopt/ico10.png" class="img-icon">
+                    </div>
+                    <div class="content">
+                      <div class="title small">Telmex para el hogar o negocio</div>
+
+                      <div class="description">
+                          Elige la velocidad y los servicios que deseas
+                      </div>
+                    </div>
+                </a>
+              </div>
+              <!--/ Pedidos -->
+
+            </div>
+
+            <div class="text-center align-self-end pb-3 logo-mic w-100">
+                <img src="assets/images/home/logo-mic.png" class="img-icon" width="180">
+            </div>
         </section>
         <!-- content-wrapper ends -->
         <!-- partial:./partials/_footer.html -->
@@ -345,20 +379,205 @@
   </div>
 
   <!-- Modal Tutorial Video-->
-<div class="modal fade modVideo modal-comm" id="verTutorial" tabindex="-1" aria-labelledby="verTutorialLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe  class="embed-responsive-item" src="//www.youtube.com/embed/0tfkMpuvQ6U" title="Microtec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="modal fade modVideo modal-comm" id="verTutorial" tabindex="-1" aria-labelledby="verTutorialLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="embed-responsive embed-responsive-16by9">
+              <iframe  class="embed-responsive-item" src="//www.youtube.com/embed/0tfkMpuvQ6U" title="Microtec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <!-- Modal subopcion Payjoy-->
+  <div class="modal fade modal-suboption" id="subPayjoy" tabindex="-1" aria-labelledby="subPayjoyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="subPayjoyLabel">¿Que desea hacer?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border-0">
+          <div class="row subopt justify-content-around">
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <a href="https://www.payjoy.com/merchant2/#/app" target="_blank" class="subopt__item">
+                 <img src="assets/images/subopc/payjoy/venta.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Venta de Equipos</h5>
+               </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <a id="pago_payjoy" href="https://www.micro-tec.com.mx/pagina/tramitesExpress/mgr.php" class="subopt__item colorbox cboxElement">
+                 <img src="assets/images/subopc/payjoy/saldo.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Pagos</h5>
+               </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item" title="Elige el modelo de tus sueños y aplica a un plan de financiamiento." data-toggle="modal" data-target="#subConstruc">
+                 <img src="assets/images/subopc/payjoy/lista.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Lista de Equipos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item">
+                 <img src="assets/images/subopc/payjoy/foto.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Adjuntar Foto</h5>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal subopcion Pago servicios-->
+  <div class="modal fade modal-suboption " id="subPagoservs" tabindex="-1" aria-labelledby="subPagoservsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="subPagoservsLabel">¿Que desea hacer?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border-0">
+          <div class="row subopt justify-content-around">
+            <div class="col-lg-5 col-md-6 py-2 col-6">
+               <a href="https://www.micro-tec.com.mx/pagina/mpayExpress/micropay.php" target="_blank" class="subopt__item subopt--orange colorbox cboxElement">
+                 <img src="assets/images/subopc/pagos/servicios.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Pago De Servicios</h5>
+               </a>
+            </div>
+            <div class="col-lg-5 col-md-6 py-2 col-6">
+               <a id="pago_payjoy" href="https://www.micro-tec.com.mx/pagina/mpayExpress/micropay.php" class="subopt__item subopt--orange colorbox cboxElement">
+                 <img src="assets/images/subopc/pagos/prepago.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Tarjetas Prepago</h5>
+               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal subopcion bajo Construccion-->
+  <div class="modal fade modal-suboption modal-suboption--underc" id="subConstruc" tabindex="-1" aria-labelledby="subConstrucLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0 d-none">
+          <h5 class="modal-title w-100 text-center" id="subConstrucLabel">¿Que desea hacer?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border-0 p-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="row subopt justify-content-around">
+            <div class="col-lg-9">
+               <div class="subopt__item--noready">
+                 <img src="assets/images/icons/yellow-triangle.png" alt="" class="img-fluid">
+                 <h5 class="subopt-title">EN CONSTRUCCIÓN</h5>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal subopcion Adelantos-->
+  <div class="modal fade modal-suboption modal-suboption--bluedark" id="subAdelantos" tabindex="-1" aria-labelledby="subAdelantosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="subPayjoyLabel">¿Que desea hacer?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border-0">
+          <div class="row subopt justify-content-around">
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--darkblue">
+                 <img src="assets/images/subopc/adelantos/venta.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Venta de Equipos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--darkblue">
+                 <img src="assets/images/subopc/adelantos/pagos.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Pagos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--darkblue">
+                 <img src="assets/images/subopc/adelantos/lista.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Lista de Equipos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--darkblue">
+                 <img src="assets/images/subopc/adelantos/foto.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Adjuntar Foto</h5>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal subopcion Telmex-->
+  <div class="modal fade modal-suboption" id="subTelmex" tabindex="-1" aria-labelledby="subTelmexLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="subTelmexLabel">¿Que desea hacer?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body border-0">
+          <div class="row subopt justify-content-around">
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--lgblue">
+                 <img src="assets/images/subopc/telmex/venta.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Venta de Equipos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--lgblue">
+                 <img src="assets/images/subopc/telmex/pagos.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Pagos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--lgblue">
+                 <img src="assets/images/subopc/telmex/equipo.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Lista de Equipos</h5>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2 col-6">
+               <div class="subopt__item subopt--lgblue">
+                 <img src="assets/images/subopc/telmex/foto.jpg" alt="" class="img-fluid">
+                 <h5 class="subopt-title">Adjuntar Foto</h5>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- container-scroller -->
     <div class="float-icons d-none">
       <a href="" class="chat-whats ico-float"></a>
