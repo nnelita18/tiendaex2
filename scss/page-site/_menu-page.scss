@@ -295,15 +295,22 @@ $sites: '.sites';
 			margin-top: 4rem;
 		}
 	}
+
 	@include media-breakpoint-down(md) {
 		padding-top: .5rem;
 		height: auto;
 	}
+	@include media-breakpoint-down(lg) {
+		height: auto;
+	}
 
 }
-	@media (min-width: 960px) and (max-height: 780px){
+	@media (max-width: 1200px) and (max-height: 600px){
 		.sites,
 		#sidebar {
+			// height: auto;
+		}
+		.sites {
 			height: auto;
 		}
 		.logo-mic {
@@ -359,6 +366,10 @@ $sites: '.sites';
 	&--purp {
 		background: rgb(87,80,157);
 		background: linear-gradient(0deg, rgba(87,80,157,1) 0%, rgba(164,125,182,1) 48%, rgba(203,147,193,1) 100%);
+	}
+	&--purp2 {
+		background: rgb(99,33,114);
+		background: linear-gradient(0deg, rgba(135,75,115,1) 0%, rgba(122,72,135,1) 48%, rgba(99,33,114,1) 100%);
 	}
 	&--pink {
 		background: rgb(210,59,121);
